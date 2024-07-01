@@ -1,0 +1,160 @@
+{
+	"companyName": "Template Website",
+  "email": "email@company.com",
+  "linkFacebook": "https://www.facebook.com",
+	"pageHome": {
+    "sections": [
+      {
+        "sectionHeroWithFacebookAndContact": {
+          "linkFacebook": "https://www.facebook.com",
+          "subText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "text": "Your one stop website maker!"
+        }
+      },
+      {
+        "sectionImage": {
+          "imageFileName": "images/logo.png",
+          "imageFirst": true,
+          "subText": "Porttitor leo a diam sollicitudin tempor id eu nisl. Cursus in hac habitasse platea dictumst quisque sagittis purus. Mi tempus imperdiet nulla malesuada pellentesque elit. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Eget magna fermentum iaculis eu non. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Molestie a iaculis at erat pellentesque. Tincidunt dui ut ornare lectus sit amet est. Elit pellentesque habitant morbi tristique senectus et netus et.",
+          "text": "Eget est lorem ipsum"
+        }
+      },
+      {
+        "sectionImage": {
+          "imageFileName": "images/logo.png",
+          "imageFirst": false,
+          "subText": "Eu sem integer vitae justo eget magna.",
+          "text": "Eros in cursus turpis"
+        }
+      },
+      {
+        "sectionImage": {
+          "imageFileName": "images/logo.png",
+          "imageFirst": true,
+          "subText": "At ultrices mi tempus imperdiet.",
+          "text": "Z"
+        }
+      },
+      {
+        "sectionGrid": {
+          "sectionGridCols": [
+            {
+              "subText": "Netus et malesuada fames ac turpis egestas maecenas pharetra convallis.",
+              "text": "One"
+            },
+            {
+              "subText": "Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+              "text": "Two"
+            },
+            {
+              "subText": "Nunc consequat interdum varius sit amet mattis.",
+              "text": "Three"
+            }
+          ]
+        }
+      }
+    ]
+	},
+  "pages": [
+    {
+      "link": "page-offer",
+      "name": "Page Offer",
+      "sections": [
+        {
+          "sectionHeroCentered": {
+            "subText": "We work with you to gather website information (service descriptions, contact information, pictures, and more) to increase increase your organization's credibility and showcase your products to prospective customers.",
+            "text": "Up North Websites"
+          }
+        },
+        {
+          "sectionOffer": {
+            "TODO": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dropdown 1",
+      "pages": [
+        {
+          "name": "Page A",
+          "link": "page-a",
+          "sections": [
+            {
+              "sectionHeroCentered": {
+                "subText": "Tincidunt augue interdum velit euismod in. Turpis massa sed elementum tempus egestas.",
+                "text": "Page A"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Page B",
+          "link": "page-b",
+          "sections": [
+            {
+              "sectionHeroCentered": {
+                "subText": "Maecenas ultricies mi eget mauris pharetra et ultrices neque ornare. Pretium viverra suspendisse potenti nullam ac tortor vitae purus. Egestas egestas fringilla phasellus faucibus scelerisque eleifend.",
+                "text": "Page B"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "link": "contact",
+      "name": "Contact",
+      "sections": [
+        {
+          "sectionContact": {
+            "email": "email@company.com",
+            "linkFacebook": "https://www.facebook.com",
+            "phoneNumber": "(###) ###-####",
+            "subText": "Call, email, or send us a message on Facebook with your questions and feedback.",
+            "text": "Contact Us",
+            "usernameFacebook": "@company"
+          }
+        }
+      ]
+    }
+  ],
+  "phoneNumber": "(###) ###-####",
+  "tagline": "Just make it.",
+
+  "theme-note": "Remove the -[theme] below to change the theme of the template. And also add -[theme] to the current.",
+  "theme": "light",
+  "theme-dark": "dark",
+  "theme-cupcake": "cupcake",
+  "theme-bumblebee": "bumblebee",
+  "theme-emerald": "emerald",
+  "theme-corporate": "corporate",
+  "theme-synthwave": "synthwave",
+  "theme-retro": "retro",
+  "theme-cyberpunk": "cyberpunk",
+  "theme-valentine": "valentine",
+  "theme-halloween": "halloween",
+  "theme-garden": "garden",
+  "theme-forest": "forest",
+  "theme-aqua": "aqua",
+  "theme-lofi": "lofi",
+  "theme-pastel": "pastel",
+  "theme-fantasy": "fantasy",
+  "theme-wireframe": "wireframe",
+  "theme-black": "black",
+  "theme-luxury": "luxury",
+  "theme-dracula": "dracula",
+  "theme-cmyk": "cmyk",
+  "theme-autumn": "autumn",
+  "theme-business": "business",
+  "theme-acid": "acid",
+  "theme-lemonade": "lemonade",
+  "theme-night": "night",
+  "theme-coffee": "coffee",
+  "theme-winter": "winter",
+  "theme-dim": "dim",
+  "theme-nord": "nord",
+  "theme-sunset": "sunset",
+
+  "usernameFacebook": "@company"
+}

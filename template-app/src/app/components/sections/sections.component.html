@@ -1,0 +1,43 @@
+<div *ngFor="let section of sections" class="pb-7 sm:pb-12">
+  <div *ngIf="section.sectionContact != null">
+    <app-section-contact
+      [sectionContact]="section.sectionContact">
+    </app-section-contact>
+  </div>
+
+  <div *ngIf="section.sectionGrid != null">
+    <app-section-grid
+      [sectionGrid]="section.sectionGrid">
+    </app-section-grid>
+  </div>
+
+  <div *ngIf="section.sectionHeroCentered != null">
+    <app-section-hero-centered
+      [sectionHeroCentered]="section.sectionHeroCentered">
+    </app-section-hero-centered>
+  </div>
+
+  <div *ngIf="section.sectionHeroWithFacebookAndContact != null">
+    <app-section-hero-with-facebook-and-contact
+      [sectionHeroWithFacebookAndContact]="section.sectionHeroWithFacebookAndContact">
+    </app-section-hero-with-facebook-and-contact>
+  </div>
+
+  <div *ngIf="section.sectionImage != null">
+    <app-section-image
+      [sectionImage]="section.sectionImage">
+    </app-section-image>
+  </div>
+
+  <div *ngIf="section.sectionOffer != null">
+    <app-section-offer
+      [sectionOffer]="section.sectionOffer">
+    </app-section-offer>
+  </div>
+
+  <div *ngIf="section.sectionText != null">
+    <app-section-text
+      [sectionText]="section.sectionText">
+    </app-section-text>
+  </div>
+</div>
