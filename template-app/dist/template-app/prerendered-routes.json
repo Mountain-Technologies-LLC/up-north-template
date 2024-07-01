@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/contact",
+    "/license",
+    "/page-a",
+    "/page-b",
+    "/page-offer",
+    "/sign-in"
+  ]
+}
