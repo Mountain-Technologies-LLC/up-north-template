@@ -19,9 +19,14 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     const html = this.document.querySelector("html");
+    const base = this.document.querySelector("base");
 
     if (html != null) {
       html.setAttribute("data-theme", this.data.theme);
+    }
+
+    if (base != null) {
+      base.setAttribute("href", "/up-north-template");
     }
   }
 
