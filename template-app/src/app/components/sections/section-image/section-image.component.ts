@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import { SectionImage } from '../../../data';
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { APP_BASE_HREF, NgClass, NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-section-image',
@@ -10,6 +10,8 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
   styleUrl: './section-image.component.scss'
 })
 export class SectionImageComponent {
+  constructor (@Inject(APP_BASE_HREF) public baseHref: string) { }
+
   @Input()
   sectionImage!: SectionImage;
 }

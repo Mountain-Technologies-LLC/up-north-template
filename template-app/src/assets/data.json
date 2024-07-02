@@ -13,7 +13,7 @@
       },
       {
         "sectionImage": {
-          "imageFileName": "images/logo.png",
+          "imageFileName": "/images/logo.png",
           "imageFirst": true,
           "subText": "Porttitor leo a diam sollicitudin tempor id eu nisl. Cursus in hac habitasse platea dictumst quisque sagittis purus. Mi tempus imperdiet nulla malesuada pellentesque elit. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Eget magna fermentum iaculis eu non. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Molestie a iaculis at erat pellentesque. Tincidunt dui ut ornare lectus sit amet est. Elit pellentesque habitant morbi tristique senectus et netus et.",
           "text": "Eget est lorem ipsum"
@@ -21,7 +21,7 @@
       },
       {
         "sectionImage": {
-          "imageFileName": "images/logo.png",
+          "imageFileName": "/images/logo.png",
           "imageFirst": false,
           "subText": "Eu sem integer vitae justo eget magna.",
           "text": "Eros in cursus turpis"
@@ -29,7 +29,7 @@
       },
       {
         "sectionImage": {
-          "imageFileName": "images/logo.png",
+          "imageFileName": "/images/logo.png",
           "imageFirst": true,
           "subText": "At ultrices mi tempus imperdiet.",
           "text": "Z"

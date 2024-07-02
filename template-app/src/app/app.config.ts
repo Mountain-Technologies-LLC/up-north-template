@@ -4,6 +4,7 @@ import { TitleStrategy, provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { TemplatePageTitleStrategy } from './TemplatePageTitleStrategy';
+import { APP_BASE_HREF, PlatformLocation } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,5 +15,20 @@ export const appConfig: ApplicationConfig = {
       provide: TitleStrategy,
       useClass: TemplatePageTitleStrategy
     },
+    {
+        provide: APP_BASE_HREF,
+        useFactory: getBaseHref,
+        deps: [PlatformLocation]
+    },
   ]
 };
+
+export function getBaseHref(platformLocation: PlatformLocation): string {
+  const baseHref = platformLocation.getBaseHrefFromDOM();
+
+  if (baseHref.length <= 1) {
+    return "";
+  }
+
+  return baseHref;
+}
