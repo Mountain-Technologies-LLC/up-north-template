@@ -1,0 +1,91 @@
+
+<div class="flex flex-col flex-auto w-full">
+  <div class="flex-auto card bg-base-100 border rounded-3xl xl:rounded-none"
+  [ngClass]="
+  {
+    'xl:border-e-0 xl:rounded-l-3xl': isFirst == true,
+    'xl:rounded-tl-3xl xl:rounded-tr-3xl' : isFirst != true && isLast != true,
+    'xl:border-s-0 xl:rounded-r-3xl': isLast == true,
+    'xl:mt-8': isFirst == true || isLast == true,
+    'opacity-70 text-base-content' : offer.isSkeleton == true,
+  }">
+    <div class="card-body">
+      <h3 class="flex-none card-title">
+        {{ offer.text }}
+      </h3>
+      <p class="flex-none text-base-content/70">
+        {{ offer.subText }}
+      </p>
+      <p *ngIf="offer.price != null" class="flex-none mt-6 flex items-baseline gap-x-1">
+        <span class="text-4xl font-bold tracking-tight">
+          {{ offer.price }}
+        </span>
+        <span class="text-sm font-semibold leading-6 tracking-wide text-base-content/70">
+          {{ offer.subPrice }}
+        </span>
+      </p>
+
+      <p *ngIf="offer.priceText != null" class="flex-none text-base-content/70">
+        {{ offer.priceText }}
+      </p>
+
+      <p *ngIf="offer.isSkeleton && offer.priceText == null" class="flex-none mt-8 flex items-baseline gap-x-1">
+        <span class="skeleton h-9 w-36"></span>
+      </p>
+
+      <ul *ngIf="offer.guarantees != null" role="list" class="flex flex-col flex-auto mt-8 gap-4 text-sm leading-6 text-base-content/70 sm:gap-6">
+        <li *ngFor="let guaranteed of offer.guarantees" class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+              clip-rule="evenodd" />
+          </svg>
+          <div [ngClass]="{ 'font-bold': guaranteed.bold == true }" class="">
+            {{ guaranteed.text }}
+          </div>
+        </li>
+      </ul>
+
+      <div *ngIf="offer.moreGuarantees != null" class="collapse text-base-content/70">
+        <input type="checkbox" />
+        <div class="collapse-title text-base-content/50 divider px-4 my-0">more</div>
+        <div class="collapse-content px-0">
+          <ul role="list" class="flex flex-col flex-auto mt-4 gap-4 text-sm leading-6 text-base-content/70 sm:gap-6">
+            <li *ngFor="let guaranteed of offer.moreGuarantees" class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd" />
+              </svg>
+              <div [ngClass]="{ 'font-bold': guaranteed.bold == true }" class="">
+                {{ guaranteed.text }}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p *ngIf="offer.isSkeleton && offer.guarantees == null" class="flex-none mt-8 flex items-baseline gap-x-1">
+        <span class="skeleton h-5 w-full"></span>
+      </p>
+      <p *ngIf="offer.isSkeleton && offer.guarantees == null" class="flex-none mt-6 flex items-baseline gap-x-1">
+        <span class="skeleton h-5 w-full"></span>
+      </p>
+      <p *ngIf="offer.isSkeleton && offer.guarantees == null" class="mt-6 flex items-baseline gap-x-1">
+        <span class="skeleton h-5 w-full"></span>
+      </p>
+
+      <div *ngIf="offer.buttonText != null" class="card-actions justify-center">
+        <button class="btn btn-block btn-primary btn-outline mt-8">{{ offer.buttonText }}</button>
+      </div>
+
+      <div *ngIf="offer.isSkeleton == true && offer.buttonText == null" class="card-actions justify-center">
+        <span class="skeleton h-12 w-full mt-8"></span>
+      </div>
+    </div>
+  </div>
+  <div class="h-6 mt-3 text-center">
+    <a *ngIf="offer.subOfferLink != null" class="link link-primary link-hover">{{ offer.subOfferText }}</a>
+    <div *ngIf="offer.subOfferLink == null">{{ offer.subOfferText }}</div>
+  </div>
+</div>

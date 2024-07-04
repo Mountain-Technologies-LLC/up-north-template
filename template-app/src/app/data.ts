@@ -27,7 +27,7 @@ export type Section = {
   sectionHeroCentered?: SectionHeroCentered | null;
   sectionHeroWithFacebookAndContact?: SectionHeroWithFacebookAndContact | null;
   sectionImage?: SectionImage | null;
-  sectionOffer?: SectionOffer | null;
+  offerSection?: OfferSection | null;
   sectionText?: SectionText | null;
 }
 
@@ -67,7 +67,29 @@ export type SectionImage = {
   text?: string | null;
 }
 
-export type SectionOffer = {
+export type OfferSection = {
+  offers: OfferSectionOffer[];
+}
+
+export type OfferSectionOffer = {
+  badge?: string | null;
+  buttonLink?: string | null;
+  buttonText?: string | null;
+  moreGuarantees?: OfferSectionOfferGuarantees[] | null;
+  guarantees?: OfferSectionOfferGuarantees[] | null;
+  price?: string | null;
+  priceText?: string | null;
+  isSkeleton?: boolean | null;
+  subOfferLink?: string | null;
+  subOfferText?: string | null;
+  subPrice?: string | null;
+  subText: string;
+  text: string;
+}
+
+export type OfferSectionOfferGuarantees = {
+  bold?: boolean | null;
+  text: string;
 }
 
 export type SectionText = {

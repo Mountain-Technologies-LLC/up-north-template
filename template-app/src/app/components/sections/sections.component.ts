@@ -7,7 +7,7 @@ import { SectionContactComponent } from "./section-contact/section-contact.compo
 import { SectionImageComponent } from "./section-image/section-image.component";
 import { SectionGridComponent } from "./section-grid/section-grid.component";
 import { SectionTextComponent } from "./section-text/section-text.component";
-import { SectionOfferComponent } from "./section-offer/section-offer.component";
+import { OfferSectionComponent } from "./offer-section/offer-section.component";
 
 @Component({
     selector: 'app-sections',
@@ -22,7 +22,7 @@ import { SectionOfferComponent } from "./section-offer/section-offer.component";
       SectionHeroCenteredComponent,
       SectionHeroWithFacebookAndContactComponent,
       SectionImageComponent,
-      SectionOfferComponent,
+      OfferSectionComponent,
       SectionTextComponent,
     ]
 })

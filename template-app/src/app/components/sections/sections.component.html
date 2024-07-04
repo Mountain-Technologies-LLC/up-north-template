@@ -29,10 +29,10 @@
     </app-section-image>
   </div>
 
-  <div *ngIf="section.sectionOffer != null">
-    <app-section-offer
-      [sectionOffer]="section.sectionOffer">
-    </app-section-offer>
+  <div *ngIf="section.offerSection != null">
+    <app-offer-section
+      [offerSection]="section.offerSection">
+    </app-offer-section>
   </div>
 
   <div *ngIf="section.sectionText != null">
