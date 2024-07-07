@@ -1,13 +1,15 @@
 export type Data = {
   companyName: string;
   email: string;
-  linkFacebook: string;
   pageHome: PageHome;
   pages: Page[];
   phoneNumber: string;
+  phoneTel: string;
+  socialLink: string;
+  socialName: string;
+  socialUsername: string;
   tagline: string;
   theme: string;
-  usernameFacebook: string;
 }
 
 export type PageHome = {
@@ -25,7 +27,7 @@ export type Section = {
   sectionContact?: SectionContact | null;
   sectionGrid?: SectionGrid | null;
   sectionHeroCentered?: SectionHeroCentered | null;
-  sectionHeroWithFacebookAndContact?: SectionHeroWithFacebookAndContact | null;
+  sectionHeroWithSocialAndContact?: SectionHeroWithSocialAndContact | null;
   sectionImage?: SectionImage | null;
   offerSection?: OfferSection | null;
   sectionText?: SectionText | null;
@@ -33,11 +35,13 @@ export type Section = {
 
 export type SectionContact = {
   email: string;
-  linkFacebook: string;
   phoneNumber: string;
+  phoneTel: string;
+  socialLink: string;
+  socialName: string;
+  socialUsername: string;
   subText: string;
   text: string;
-  usernameFacebook: string;
 }
 
 export type SectionGrid = {
@@ -54,8 +58,10 @@ export type SectionHeroCentered = {
   text: string;
 }
 
-export type SectionHeroWithFacebookAndContact = {
-  linkFacebook: string;
+export type SectionHeroWithSocialAndContact = {
+  socialLink: string;
+  socialName: string;
+  socialUsername: string;
   subText: string;
   text: string;
 }
@@ -74,6 +80,7 @@ export type OfferSection = {
 export type OfferSectionOffer = {
   badge?: string | null;
   buttonLink?: string | null;
+  buttonMailTo?: string | null;
   buttonText?: string | null;
   moreGuarantees?: OfferSectionOfferGuarantees[] | null;
   guarantees?: OfferSectionOfferGuarantees[] | null;
@@ -81,6 +88,7 @@ export type OfferSectionOffer = {
   priceText?: string | null;
   isSkeleton?: boolean | null;
   subOfferLink?: string | null;
+  subOfferMailTo?: string | null;
   subOfferText?: string | null;
   subPrice?: string | null;
   subText: string;

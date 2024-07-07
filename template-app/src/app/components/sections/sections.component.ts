@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Section } from '../../data';
 import { NgFor, NgIf } from '@angular/common';
-import { SectionHeroWithFacebookAndContactComponent } from "./section-hero-with-facebook-and-contact/section-hero-with-facebook-and-contact.component";
+import { SectionHeroWithSocialAndContactComponent } from "./section-hero-with-social-and-contact/section-hero-with-social-and-contact.component";
 import { SectionHeroCenteredComponent } from "./section-hero-centered/section-hero-centered.component";
 import { SectionContactComponent } from "./section-contact/section-contact.component";
 import { SectionImageComponent } from "./section-image/section-image.component";
@@ -20,7 +20,7 @@ import { OfferSectionComponent } from "./offer-section/offer-section.component";
       SectionContactComponent,
       SectionGridComponent,
       SectionHeroCenteredComponent,
-      SectionHeroWithFacebookAndContactComponent,
+      SectionHeroWithSocialAndContactComponent,
       SectionImageComponent,
       OfferSectionComponent,
       SectionTextComponent,
