@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { Section } from '../../data';
 import { NgFor, NgIf } from '@angular/common';
-import { SectionHeroWithSocialAndContactComponent } from "./section-hero-with-social-and-contact/section-hero-with-social-and-contact.component";
-import { SectionHeroCenteredComponent } from "./section-hero-centered/section-hero-centered.component";
-import { SectionContactComponent } from "./section-contact/section-contact.component";
-import { SectionImageComponent } from "./section-image/section-image.component";
-import { SectionGridComponent } from "./section-grid/section-grid.component";
-import { SectionTextComponent } from "./section-text/section-text.component";
+import { ContactSectionComponent } from "./contact-section/contact-section.component";
+import { GridSectionComponent } from "./grid-section/grid-section.component";
+import { ImageSectionComponent } from "./image-section/image-section.component";
+import { MainSocialAndContactSectionComponent } from "./main-sections/main-social-and-contact-section/main-social-and-contact-section.component";
+import { MainCenteredSectionComponent } from "./main-sections/main-centered-section/main-centered-section.component";
 import { OfferSectionComponent } from "./offer-section/offer-section.component";
+import { TextSectionComponent } from "./text-section/text-section.component";
 
 @Component({
     selector: 'app-sections',
@@ -17,13 +17,13 @@ import { OfferSectionComponent } from "./offer-section/offer-section.component";
     imports: [
       NgFor,
       NgIf,
-      SectionContactComponent,
-      SectionGridComponent,
-      SectionHeroCenteredComponent,
-      SectionHeroWithSocialAndContactComponent,
-      SectionImageComponent,
+      ContactSectionComponent,
+      GridSectionComponent,
+      ImageSectionComponent,
+      MainCenteredSectionComponent,
+      MainSocialAndContactSectionComponent,
       OfferSectionComponent,
-      SectionTextComponent,
+      TextSectionComponent,
     ]
 })
 export class SectionsComponent {

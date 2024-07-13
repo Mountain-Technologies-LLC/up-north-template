@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SectionImageComponent } from './section-image.component';
+import { GridSectionComponent } from './grid-section.component';
 
-describe('SectionImageComponent', () => {
-  let component: SectionImageComponent;
-  let fixture: ComponentFixture<SectionImageComponent>;
+describe('GridSectionComponent', () => {
+  let component: GridSectionComponent;
+  let fixture: ComponentFixture<GridSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SectionImageComponent]
+      imports: [GridSectionComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SectionImageComponent);
+    fixture = TestBed.createComponent(GridSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

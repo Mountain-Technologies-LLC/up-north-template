@@ -1,32 +1,32 @@
 <div *ngFor="let section of sections" class="pb-7 sm:pb-12">
-  <div *ngIf="section.sectionContact != null">
-    <app-section-contact
-      [sectionContact]="section.sectionContact">
-    </app-section-contact>
+  <div *ngIf="section.contactSection != null">
+    <app-contact-section
+      [contactSection]="section.contactSection">
+    </app-contact-section>
   </div>
 
-  <div *ngIf="section.sectionGrid != null">
-    <app-section-grid
-      [sectionGrid]="section.sectionGrid">
-    </app-section-grid>
+  <div *ngIf="section.gridSection != null">
+    <app-grid-section
+      [gridSection]="section.gridSection">
+    </app-grid-section>
   </div>
 
-  <div *ngIf="section.sectionHeroCentered != null">
-    <app-section-hero-centered
-      [sectionHeroCentered]="section.sectionHeroCentered">
-    </app-section-hero-centered>
+  <div *ngIf="section.imageSection != null">
+    <app-image-section
+      [imageSection]="section.imageSection">
+    </app-image-section>
   </div>
 
-  <div *ngIf="section.sectionHeroWithSocialAndContact != null">
-    <app-section-hero-with-social-and-contact
-      [sectionHeroWithSocialAndContact]="section.sectionHeroWithSocialAndContact">
-    </app-section-hero-with-social-and-contact>
+  <div *ngIf="section.mainCenteredSection != null">
+    <app-main-centered-section
+      [mainCenteredSection]="section.mainCenteredSection">
+    </app-main-centered-section>
   </div>
 
-  <div *ngIf="section.sectionImage != null">
-    <app-section-image
-      [sectionImage]="section.sectionImage">
-    </app-section-image>
+  <div *ngIf="section.mainSocialAndContactSection != null">
+    <app-main-social-and-contact-section
+      [mainSocialAndContactSection]="section.mainSocialAndContactSection">
+    </app-main-social-and-contact-section>
   </div>
 
   <div *ngIf="section.offerSection != null">
@@ -35,9 +35,9 @@
     </app-offer-section>
   </div>
 
-  <div *ngIf="section.sectionText != null">
-    <app-section-text
-      [sectionText]="section.sectionText">
-    </app-section-text>
+  <div *ngIf="section.textSection != null">
+    <app-text-section
+      [textSection]="section.textSection">
+    </app-text-section>
   </div>
 </div>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SectionGridComponent } from './section-grid.component';
+import { TextSectionComponent } from './text-section.component';
 
-describe('SectionGridComponent', () => {
-  let component: SectionGridComponent;
-  let fixture: ComponentFixture<SectionGridComponent>;
+describe('TextSectionComponent', () => {
+  let component: TextSectionComponent;
+  let fixture: ComponentFixture<TextSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SectionGridComponent]
+      imports: [TextSectionComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SectionGridComponent);
+    fixture = TestBed.createComponent(TextSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

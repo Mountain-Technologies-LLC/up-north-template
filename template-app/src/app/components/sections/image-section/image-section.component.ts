@@ -1,17 +1,17 @@
 import { Component, Inject, Input } from '@angular/core';
-import { SectionImage } from '../../../data';
+import { ImageSection } from '../../../data';
 import { APP_BASE_HREF, NgClass, NgFor, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-section-image',
+  selector: 'app-image-section',
   standalone: true,
   imports: [NgClass, NgFor, NgIf],
-  templateUrl: './section-image.component.html',
-  styleUrl: './section-image.component.scss'
+  templateUrl: './image-section.component.html',
+  styleUrl: './image-section.component.scss'
 })
-export class SectionImageComponent {
+export class ImageSectionComponent {
   constructor (@Inject(APP_BASE_HREF) public baseHref: string) { }
 
   @Input()
-  sectionImage!: SectionImage;
+  imageSection!: ImageSection;
 }

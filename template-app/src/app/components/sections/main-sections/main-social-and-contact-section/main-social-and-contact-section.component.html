@@ -1,18 +1,18 @@
 <div class="mx-auto max-w-2xl py-20 sm:py-32 lg:py-48">
   <div class="mb-5 sm:mb-8 flex justify-center text-center">
     <div class="text-base-content/70 relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-neutral/10 hover:ring-neutral/20">
-      View <span class="hidden sm:inline">our latest announcements</span><span class="sm:hidden">us</span> on {{ sectionHeroWithSocialAndContact.socialName }}.
-      <a href="{{ sectionHeroWithSocialAndContact.socialLink }}" class="font-semibold text-secondary" target="_blank">
+      View <span class="hidden sm:inline">our latest announcements</span><span class="sm:hidden">us</span> on {{ mainSocialAndContactSection.socialName }}.
+      <a href="{{ mainSocialAndContactSection.socialLink }}" class="font-semibold text-secondary" target="_blank">
         <span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span>
       </a>
     </div>
   </div>
   <div class="text-center">
     <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
-      {{sectionHeroWithSocialAndContact.text}}
+      {{mainSocialAndContactSection.text}}
     </h1>
     <p class="text-base-content/70 mt-6 text-lg leading-8">
-      {{sectionHeroWithSocialAndContact.subText}}
+      {{mainSocialAndContactSection.subText}}
     </p>
     <div class="mt-10 flex items-center justify-center gap-x-6">
       <a routerLink="/contact" class="btn btn-primary hover:btn-secondary px-3.5 py-2.5">Get started</a>
