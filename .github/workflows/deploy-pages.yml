@@ -29,7 +29,7 @@ jobs:
         cache: 'npm'
         cache-dependency-path: "./template-app/package-lock.json"
     - run: npm ci --prefix ./template-app
-    - run: npm run build --if-present --prefix ./template-app -- --base-href /up-north-template --deploy-url /up-north-template/
+    - run: npm run build --if-present --prefix ./template-app -- --base-href /${{ github.event.repository.name }} --deploy-url /${{ github.event.repository.name }}/
 #    - run: npm test
     - uses: actions/upload-artifact@master
       with:
