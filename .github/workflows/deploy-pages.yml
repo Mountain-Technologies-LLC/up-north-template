@@ -1,5 +1,6 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# https://github.com/marketplace/actions/deploy-github-pages-site
 
 name: Deploy GitHub Pages
 
@@ -30,6 +31,11 @@ jobs:
     - run: npm ci --prefix ./template-app
     - run: npm run build --if-present --prefix ./template-app
 #    - run: npm test
+    - uses: actions/upload-artifact@master
+      with:
+        name: page
+        path: template-app/dist/template-app/browser
+        if-no-files-found: error
 
 #  # Deploy job
 #  deploy:
