@@ -7,7 +7,7 @@
         </svg>
       </div>
       <ul tabindex="0" class="dropdown-content z-[1] menu menu-sm p-2 mt-3 shadow bg-base-100 rounded-box w-52">
-        <li *ngFor="let page of pages">
+        <li *ngFor="let page of pages()">
           <a *ngIf="page.sections != null" routerLink="/{{page.link}}" onclick="document.activeElement.blur()">
             {{ page.name }}
           </a>
@@ -20,11 +20,11 @@
         </li>
       </ul>
     </div>
-    <a routerLink="/" class="btn btn-ghost text-xl">{{companyName}}</a>
+    <a routerLink="/" class="btn btn-ghost text-xl">{{companyName()}}</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li *ngFor="let page of pages">
+      <li *ngFor="let page of pages()">
         <a *ngIf="page.sections != null" routerLink="/{{page.link}}">
           {{ page.name }}
         </a>

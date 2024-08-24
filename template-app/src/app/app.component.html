@@ -1,7 +1,5 @@
-<div [attr.data-theme]="theme" class="bg-base-100 grow">
-  <header class="absolute inset-x-0 top-0 z-50">
-    <app-navbar></app-navbar>
-  </header>
+<div [attr.data-theme]="data().theme" class="bg-base-100 grow">
+  <app-header [(data)]="data"></app-header>
 
   <div class="mx-auto pt-14">
     <div class="relative isolate">
@@ -18,7 +16,7 @@
 </div>
 
 <div class="bg-cover bg-no-repeat bg-center text-primary-content"
-  [style.backgroundImage]="footerBackgroundImage">
+  [style.backgroundImage]="backgroundImage">
   <footer class="footer footer-center p-10 bg-primary/80">
     <aside>
       <img [src]="baseHref + '/images/logo.png'" class="inline-block h-12 w-12 rounded-full ring-2 ring-white bg-white" alt="logo">
