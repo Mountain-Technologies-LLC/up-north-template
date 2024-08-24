@@ -9,7 +9,6 @@ import { NgFor, NgIf } from '@angular/common';
   standalone: true,
   imports: [NgFor, NgIf, RouterLink],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
   private readonly data: Data = data;

@@ -6,7 +6,6 @@ import { TextSection } from '../../../data';
   standalone: true,
   imports: [],
   templateUrl: './text-section.component.html',
-  styleUrl: './text-section.component.scss'
 })
 export class TextSectionComponent {
   @Input()

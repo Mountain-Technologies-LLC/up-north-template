@@ -7,7 +7,6 @@ import { APP_BASE_HREF } from '@angular/common';
   standalone: true,
   imports: [],
   templateUrl: './main-image-section.component.html',
-  styleUrl: './main-image-section.component.scss'
 })
 export class MainImageSectionComponent {
   constructor (@Inject(APP_BASE_HREF) public baseHref: string) { }

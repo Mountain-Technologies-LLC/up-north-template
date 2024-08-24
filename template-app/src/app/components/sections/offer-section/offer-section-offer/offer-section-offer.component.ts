@@ -8,7 +8,6 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [NgClass, NgFor, NgIf, RouterLink],
   templateUrl: './offer-section-offer.component.html',
-  styleUrl: './offer-section-offer.component.scss'
 })
 export class OfferSectionOfferComponent {
   @Input()

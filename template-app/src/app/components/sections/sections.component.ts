@@ -14,7 +14,6 @@ import { TextSectionComponent } from "./text-section/text-section.component";
     selector: 'app-sections',
     standalone: true,
     templateUrl: './sections.component.html',
-    styleUrl: './sections.component.scss',
     imports: [
       NgFor,
       NgIf,

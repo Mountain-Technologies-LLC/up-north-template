@@ -8,7 +8,6 @@ import { SectionsComponent } from "../sections/sections.component";
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
-    styleUrl: './home.component.scss',
     imports: [RouterLink, SectionsComponent]
 })
 export class HomeComponent {

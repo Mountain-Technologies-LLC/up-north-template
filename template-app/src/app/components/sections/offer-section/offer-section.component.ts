@@ -8,7 +8,6 @@ import { OfferSectionOfferComponent } from './offer-section-offer/offer-section-
   standalone: true,
   imports: [NgClass, OfferSectionOfferComponent],
   templateUrl: './offer-section.component.html',
-  styleUrl: './offer-section.component.scss'
 })
 export class OfferSectionComponent {
   @Input()

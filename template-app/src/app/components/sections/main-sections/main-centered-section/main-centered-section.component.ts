@@ -6,7 +6,6 @@ import { MainCenteredSection } from '../../../../data';
   standalone: true,
   imports: [],
   templateUrl: './main-centered-section.component.html',
-  styleUrl: './main-centered-section.component.scss'
 })
 export class MainCenteredSectionComponent {
   @Input()

@@ -7,7 +7,6 @@ import { APP_BASE_HREF, NgClass, NgFor, NgIf } from '@angular/common';
   standalone: true,
   imports: [NgClass, NgFor, NgIf],
   templateUrl: './image-section.component.html',
-  styleUrl: './image-section.component.scss'
 })
 export class ImageSectionComponent {
   constructor (@Inject(APP_BASE_HREF) public baseHref: string) { }

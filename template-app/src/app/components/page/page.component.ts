@@ -8,7 +8,6 @@ import { SectionsComponent } from "../sections/sections.component";
     selector: 'app-page',
     standalone: true,
     templateUrl: './page.component.html',
-    styleUrl: './page.component.scss',
     imports: [SectionsComponent]
 })
 export class PageComponent {

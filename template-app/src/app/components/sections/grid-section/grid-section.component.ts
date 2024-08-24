@@ -7,7 +7,6 @@ import { NgFor } from '@angular/common';
   standalone: true,
   imports: [NgFor],
   templateUrl: './grid-section.component.html',
-  styleUrl: './grid-section.component.scss'
 })
 export class GridSectionComponent {
   @Input()
