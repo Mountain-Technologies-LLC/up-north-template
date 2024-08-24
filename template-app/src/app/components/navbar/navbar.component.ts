@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Data, Page } from '../../data';
+import { Data, Page } from '../../../data';
 import * as data from '../../../data.json';
 import { RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';

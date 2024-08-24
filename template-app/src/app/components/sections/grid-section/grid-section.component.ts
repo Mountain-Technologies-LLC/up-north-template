@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { GridSection } from '../../../data';
+import { GridSection } from '../../../../data';
 import { NgFor } from '@angular/common';
 
 @Component({

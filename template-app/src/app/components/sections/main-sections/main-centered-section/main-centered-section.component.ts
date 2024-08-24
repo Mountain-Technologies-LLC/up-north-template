@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MainCenteredSection } from '../../../../data';
+import { MainCenteredSection } from '../../../../../data';
 
 @Component({
   selector: 'app-main-centered-section',

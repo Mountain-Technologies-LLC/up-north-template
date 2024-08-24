@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 import { RouterStateSnapshot, TitleStrategy } from "@angular/router";
-import { Data } from "./data";
+import { Data } from "../data";
 import * as data from '../data.json';
 
 @Injectable({providedIn: 'root'})

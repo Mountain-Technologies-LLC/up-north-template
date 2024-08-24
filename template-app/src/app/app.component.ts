@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import * as data from '../data.json';
-import { Data } from './data';
+import { Data } from '../data';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { APP_BASE_HREF, DOCUMENT } from '@angular/common';
 

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Section } from '../../data';
+import { Section } from '../../../data';
 import { NgFor, NgIf } from '@angular/common';
 import { ContactSectionComponent } from "./contact-section/contact-section.component";
 import { GridSectionComponent } from "./grid-section/grid-section.component";
