@@ -1,6 +1,7 @@
 {
   "companyName": "Template Website",
   "email": "email@company.com",
+  "footerImageFileName": "footer-bg.jpg",
   "pageHome": {
     "sections": [
       {
@@ -152,6 +153,11 @@
       "name": "Contact",
       "link": "contact",
       "sections": [
+        {
+          "mainImageSection": {
+            "imageFileName": "walter-1.jpg"
+          }
+        },
         {
           "contactSection": {
             "email": "email@company.com",

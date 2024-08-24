@@ -32,6 +32,10 @@ export class AppComponent implements OnInit {
   }
 
   companyName: string = this.data.companyName;
+  footerBackgroundImage: string
+    = this.data.footerImageFileName != null
+    ? "url('" + this.baseHref + "/images/" + this.data.footerImageFileName + "')"
+    : "unset";
   theme: string = this.data.theme;
 
   // Footer

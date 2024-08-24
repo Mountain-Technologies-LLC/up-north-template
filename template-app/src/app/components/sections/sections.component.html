@@ -1,41 +1,47 @@
 <div *ngFor="let section of sections" class="pb-7 sm:pb-12">
-  <div *ngIf="section.contactSection != null">
+  <div *ngIf="section.contactSection != null" [class]="defaultClasses">
     <app-contact-section
       [contactSection]="section.contactSection">
     </app-contact-section>
   </div>
 
-  <div *ngIf="section.gridSection != null">
+  <div *ngIf="section.gridSection != null" [class]="defaultClasses">
     <app-grid-section
       [gridSection]="section.gridSection">
     </app-grid-section>
   </div>
 
-  <div *ngIf="section.imageSection != null">
+  <div *ngIf="section.imageSection != null" [class]="defaultClasses">
     <app-image-section
       [imageSection]="section.imageSection">
     </app-image-section>
   </div>
 
-  <div *ngIf="section.mainCenteredSection != null">
+  <div *ngIf="section.mainCenteredSection != null" [class]="defaultClasses">
     <app-main-centered-section
       [mainCenteredSection]="section.mainCenteredSection">
     </app-main-centered-section>
   </div>
 
-  <div *ngIf="section.mainSocialAndContactSection != null">
+  <div *ngIf="section.mainImageSection != null" class="py-1">
+    <app-main-image-section
+      [mainImageSection]="section.mainImageSection">
+    </app-main-image-section>
+  </div>
+
+  <div *ngIf="section.mainSocialAndContactSection != null" [class]="defaultClasses">
     <app-main-social-and-contact-section
       [mainSocialAndContactSection]="section.mainSocialAndContactSection">
     </app-main-social-and-contact-section>
   </div>
 
-  <div *ngIf="section.offerSection != null">
+  <div *ngIf="section.offerSection != null" [class]="defaultClasses">
     <app-offer-section
       [offerSection]="section.offerSection">
     </app-offer-section>
   </div>
 
-  <div *ngIf="section.textSection != null">
+  <div *ngIf="section.textSection != null" [class]="defaultClasses">
     <app-text-section
       [textSection]="section.textSection">
     </app-text-section>

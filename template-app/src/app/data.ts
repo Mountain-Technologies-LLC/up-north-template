@@ -1,6 +1,7 @@
 export type Data = {
   companyName: string;
   email: string;
+  footerImageFileName?: string | null;
   pageHome: PageHome;
   pages: Page[];
   phoneNumber: string;
@@ -28,6 +29,7 @@ export type Section = {
   gridSection?: GridSection | null;
   imageSection?: ImageSection | null;
   mainCenteredSection?: MainCenteredSection | null;
+  mainImageSection?: MainImageSection | null;
   mainSocialAndContactSection?: MainSocialAndContactSection | null;
   offerSection?: OfferSection | null;
   textSection?: TextSection | null;
@@ -63,6 +65,10 @@ export type ImageSection = {
 export type MainCenteredSection = {
   subText: string;
   text: string;
+}
+
+export type MainImageSection = {
+  imageFileName: string;
 }
 
 export type MainSocialAndContactSection = {
