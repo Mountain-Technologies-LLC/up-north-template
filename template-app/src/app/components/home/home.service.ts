@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as data from '../../../assets/data.json';
+import * as data from '../../../data.json';
 import { Data, PageHome } from './../../data';
 
 @Injectable({
