@@ -36,6 +36,7 @@ export type Section = {
 }
 
 export type ContactSection = {
+  sectionId: string;
   email: string;
   phoneNumber: string;
   phoneTel: string;
@@ -47,6 +48,7 @@ export type ContactSection = {
 }
 
 export type GridSection = {
+  sectionId: string;
   gridColsSection: GridColSection[];
 }
 
@@ -56,6 +58,7 @@ export type GridColSection = {
 }
 
 export type ImageSection = {
+  sectionId: string;
   imageFileName: string;
   imageFirst?: boolean | null;
   subText?: string | null;
@@ -63,23 +66,26 @@ export type ImageSection = {
 }
 
 export type MainCenteredSection = {
+  sectionId: string;
   subText: string;
   text: string;
 }
 
 export type MainImageSection = {
+  sectionId: string;
   imageFileName: string;
 }
 
 export type MainSocialAndContactSection = {
+  sectionId: string;
   socialLink: string;
   socialName: string;
-  socialUsername: string;
   subText: string;
   text: string;
 }
 
 export type OfferSection = {
+  sectionId: string;
   offers: OfferSectionOffer[];
 }
 
@@ -107,6 +113,7 @@ export type OfferSectionOfferGuarantees = {
 }
 
 export type TextSection = {
+  sectionId: string;
   subText: string;
   text: string;
 }

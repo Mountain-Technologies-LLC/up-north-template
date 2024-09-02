@@ -6,6 +6,7 @@
     "sections": [
       {
         "mainSocialAndContactSection": {
+          "sectionId": "0-0-0-0-1",
           "socialLink": "https://www.facebook.com",
           "socialName": "Facebook",
           "socialUsername": "@facebook",
@@ -15,6 +16,7 @@
       },
       {
         "imageSection": {
+          "sectionId": "0-0-0-0-2",
           "imageFileName": "/images/logo.png",
           "imageFirst": true,
           "subText": "Porttitor leo a diam sollicitudin tempor id eu nisl. Cursus in hac habitasse platea dictumst quisque sagittis purus. Mi tempus imperdiet nulla malesuada pellentesque elit. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Eget magna fermentum iaculis eu non. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Molestie a iaculis at erat pellentesque. Tincidunt dui ut ornare lectus sit amet est. Elit pellentesque habitant morbi tristique senectus et netus et.",
@@ -23,6 +25,7 @@
       },
       {
         "imageSection": {
+          "sectionId": "0-0-0-0-3",
           "imageFileName": "/images/logo.png",
           "imageFirst": false,
           "subText": "Eu sem integer vitae justo eget magna.",
@@ -31,6 +34,7 @@
       },
       {
         "imageSection": {
+          "sectionId": "0-0-0-0-4",
           "imageFileName": "/images/logo.png",
           "imageFirst": true,
           "subText": "At ultrices mi tempus imperdiet.",
@@ -39,6 +43,7 @@
       },
       {
         "gridSection": {
+          "sectionId": "0-0-0-0-5",
           "gridColsSection": [
             {
               "subText": "Netus et malesuada fames ac turpis egestas maecenas pharetra convallis.",
@@ -64,12 +69,14 @@
       "sections": [
         {
           "mainCenteredSection": {
+            "sectionId": "0-0-0-0-6",
             "subText": "Tincidunt augue interdum velit euismod. Fames ac turpis egestas sed tempus urna et. Cras fermentum odio eu feugiat pretium nibh ipsum. Ut venenatis tellus in metus vulputate eu scelerisque felis. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Vitae aliquet nec ullamcorper sit amet risus.",
             "text": "Best Deals in Town"
           }
         },
         {
           "offerSection": {
+            "sectionId": "0-0-0-0-7",
             "offers": [
               {
                 "buttonText": "Start here",
@@ -129,6 +136,7 @@
           "sections": [
             {
               "mainCenteredSection": {
+                "sectionId": "0-0-0-0-8",
                 "subText": "Tincidunt augue interdum velit euismod in. Turpis massa sed elementum tempus egestas.",
                 "text": "Page A"
               }
@@ -141,6 +149,7 @@
           "sections": [
             {
               "mainCenteredSection": {
+                "sectionId": "0-0-0-0-9",
                 "subText": "Maecenas ultricies mi eget mauris pharetra et ultrices neque ornare. Pretium viverra suspendisse potenti nullam ac tortor vitae purus. Egestas egestas fringilla phasellus faucibus scelerisque eleifend.",
                 "text": "Page B"
               }
@@ -155,11 +164,13 @@
       "sections": [
         {
           "mainImageSection": {
+          "sectionId": "0-0-0-0-10",
             "imageFileName": "walter-1.jpg"
           }
         },
         {
           "contactSection": {
+            "sectionId": "0-0-0-0-11",
             "email": "email@company.com",
             "phoneNumber": "(###) ###-####",
             "phoneTel": "+10000000000",

@@ -1,4 +1,4 @@
-<div *ngFor="let section of sections" class="pb-7 sm:pb-12">
+<div *ngFor="let section of sections()" class="pb-7 sm:pb-12">
   <div *ngIf="section.contactSection != null" [class]="defaultClasses">
     <app-contact-section
       [contactSection]="section.contactSection">
@@ -29,10 +29,18 @@
     </app-main-image-section>
   </div>
 
-  <div *ngIf="section.mainSocialAndContactSection != null" [class]="defaultClasses">
-    <app-main-social-and-contact-section
-      [mainSocialAndContactSection]="section.mainSocialAndContactSection">
-    </app-main-social-and-contact-section>
+
+  <div *ngIf="section.mainSocialAndContactSection != null" class="flex">
+    <div *ngIf="editing" class="flex-none self-center">
+      <app-main-social-and-contact-edit
+        [mainSocialAndContactSection]="section.mainSocialAndContactSection">
+      </app-main-social-and-contact-edit>
+    </div>
+    <div class="flex-1">
+      <app-main-social-and-contact-section
+        [mainSocialAndContactSection]="section.mainSocialAndContactSection">
+      </app-main-social-and-contact-section>
+    </div>
   </div>
 
   <div *ngIf="section.offerSection != null" [class]="defaultClasses">

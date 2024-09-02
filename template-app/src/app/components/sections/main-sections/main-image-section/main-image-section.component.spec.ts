@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MainImageSectionComponent } from './main-image-section.component';
 
 describe('MainImageSectionComponent', () => {

@@ -1,8 +1,9 @@
-import { Component, input, model } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Data } from '../../../data';
 import { NgFor, NgIf } from '@angular/common';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { FormsModule } from '@angular/forms';
+import { GlobalService } from '../../services/global.service';
 
 @Component({
   selector: 'app-header',
@@ -12,26 +13,30 @@ import { FormsModule } from '@angular/forms';
 })
 export class HeaderComponent {
   editing = input<boolean>();
-  data = model<Data>();
+  data = input<Data>();
+
+  constructor (public globalService: GlobalService) { }
 
   themes: string[] = [
     "light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter", "dim", "nord", "sunset",
   ];
 
   changedCompanyName(event: Event) {
-    this.data.update((data) => {
-      if (!data) return;
+    const newValue: Data = {
+      ...this.globalService.data.value,
+      companyName: (event.target as HTMLInputElement).value,
+    };
 
-      return { ...data, companyName: (event.target as HTMLInputElement).value };
-    });
+    this.globalService.data.next(newValue);
   }
 
   changedTheme(theme: string) {
-    this.data.update((data) => {
-      if (!data) return;
+    const newValue: Data = {
+      ...this.globalService.data.value,
+      theme: theme,
+    };
 
-      return { ...data, theme: theme };
-    });
+    this.globalService.data.next(newValue);
   }
 
   exportJson() {

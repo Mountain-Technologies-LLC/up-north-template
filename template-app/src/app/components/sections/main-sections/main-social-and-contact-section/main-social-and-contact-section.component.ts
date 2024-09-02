@@ -1,14 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { MainSocialAndContactSection } from '../../../../../data';
 import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-main-social-and-contact-section',
   standalone: true,
-  imports: [RouterLink],
+  imports: [NgIf, RouterLink],
   templateUrl: './main-social-and-contact-section.component.html',
 })
 export class MainSocialAndContactSectionComponent {
-  @Input()
-  mainSocialAndContactSection!: MainSocialAndContactSection;
+  mainSocialAndContactSection = input<MainSocialAndContactSection>();
 }

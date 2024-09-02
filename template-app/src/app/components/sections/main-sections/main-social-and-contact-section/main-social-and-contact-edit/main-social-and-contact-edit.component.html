@@ -1,0 +1,90 @@
+<div class="join join-vertical">
+  <div class="dropdown dropdown-right select-none">
+    <div tabindex="0" role="button" class="btn btn-ghost m-1">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-default shrink-0">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+      </svg>
+    </div>
+    <ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-max p-2 shadow lg:-translate-y-1/2 lg:!top-1/2">
+      <li><a (click)="insertBefore()">Main Social and Contact</a></li>
+      <li><a>...</a></li>
+    </ul>
+  </div>
+
+  <div class="dropdown dropdown-right select-none">
+    <div tabindex="0" role="button" class="btn m-1">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-default shrink-0">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </div>
+    <div
+      tabindex="0"
+      class="dropdown-content bg-base-200 text-base-content rounded-box z-[1] w-max p-4 shadow grid grid-cols-1 gap-3 lg:-translate-y-1/2 lg:!top-1/2">
+      <div class="navbar bg-primary text-primary-content rounded-box">
+        <div class="navbar-start">
+          <div class="text-xl text-nowrap px-4">Main Social and Contact</div>
+        </div>
+        <div class="navbar-end">
+        </div>
+      </div>
+
+      <label class="form-control w-full">
+        <div class="label font-medium leading-6">
+          <span class="label-text">Social Name</span>
+        </div>
+        <input
+          [value]="mainSocialAndContactSection()?.socialName"
+          (change)="changedSocialName($event)"
+          type="text"
+          class="input input-bordered w-full" />
+      </label>
+
+      <label class="form-control w-full">
+        <div class="label font-medium leading-6">
+          <span class="label-text">Social Link</span>
+        </div>
+        <input
+          [value]="mainSocialAndContactSection()?.socialLink"
+          (change)="changedSocialLink($event)"
+          type="text"
+          class="input input-bordered w-full" />
+      </label>
+
+      <label class="form-control w-full">
+        <div class="label font-medium leading-6">
+          <span class="label-text">Text</span>
+        </div>
+        <textarea
+          [value]="mainSocialAndContactSection()?.text"
+          (change)="changedText($event)"
+          class="textarea textarea-bordered h-24 w-full" placeholder="Text">
+        </textarea>
+      </label>
+
+
+      <label class="form-control w-full">
+        <div class="label font-medium leading-6">
+          <span class="label-text">Sub Text</span>
+        </div>
+        <textarea
+          [value]="mainSocialAndContactSection()?.subText"
+          (change)="changedSubText($event)"
+          class="textarea textarea-bordered h-24 w-full" placeholder="Sub Text">
+        </textarea>
+      </label>
+    </div>
+  </div>
+
+  <div class="dropdown dropdown-right select-none">
+    <div tabindex="0" role="button" class="btn btn-ghost m-1">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-default shrink-0">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+      </svg>
+    </div>
+    <div
+      tabindex="0"
+      class="dropdown-content bg-base-200 text-base-content rounded-box z-[1] w-max p-4 shadow grid grid-cols-1 gap-3">
+      Add a Section Below Here
+    </div>
+  </div>
+</div>
