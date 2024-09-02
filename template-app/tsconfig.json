@@ -4,6 +4,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
+    "allowJs": true, // allow js scripts usage inside the project (https://www.geeksforgeeks.org/how-to-include-a-javascript-file-in-angular-and-call-a-function-from-that-script/)
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,

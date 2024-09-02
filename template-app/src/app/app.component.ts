@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, signal } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import * as data from '../data.json';
 import { Data } from '../data';

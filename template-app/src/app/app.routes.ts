@@ -8,7 +8,7 @@ import * as data from '../data.json';
 export let routes: Routes = [
   { path: '', component: HomeComponent, title: "Home" },
   { path: 'license', component: LicenseComponent, title: "MIT License" },
-  { path: 'sign-in', component: SignInComponent, title: "Sign In" }
+  { path: 'book-me', component: SignInComponent, title: "Book Me" }
 ];
 
 data.pages.forEach(p => {

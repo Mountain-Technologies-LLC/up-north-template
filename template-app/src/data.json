@@ -4,18 +4,25 @@
   "pageHome": {
     "sections": [
       {
-        "mainSocialAndContactSection": {
-          "sectionId": "0-0-0-0-1",
-          "socialLink": "https://www.facebook.com/profile.php?id=61555169669613",
-          "socialName": "Facebook",
-          "subText": "Elevate your home with Bright Guy Electric, your trusted partner in electrical solutions. Our expert team brings quality in-home services, ensuring your safety and comfort. From installations to repairs, we power your space with reliability. Experience excellence in every connection with Bright Guy Electric.",
-          "text": "Lighting the path with unwavering integrity and superior craftsmanship!"
+        "mainCenteredSection": {
+          "sectionId": "0-0-0-5-1",
+          "subText": "Reasonable Pricing, Not Corporate Pricing",
+          "text": "Bright Guy Electric"
         }
       },
       {
         "imageSection": {
           "sectionId": "0-0-0-0-2",
           "imageFileName": "/images/header.png"
+        }
+      },
+      {
+        "mainSocialAndContactSection": {
+          "sectionId": "0-0-0-0-1",
+          "socialLink": "https://www.facebook.com/profile.php?id=61555169669613",
+          "socialName": "Facebook",
+          "subText": "Elevate your home with Bright Guy Electric, your trusted partner in electrical solutions. Our expert team brings quality in-home services, ensuring your safety and comfort. From installations to repairs, we power your space with reliability. Experience excellence in every connection with Bright Guy Electric.",
+          "text": "Lifesaving devices does not complete…"
         }
       },
       {
@@ -41,11 +48,66 @@
   },
   "pages": [
     {
+      "name": "Leviton",
+      "link": "leviton",
+      "sections": [
+        {
+          "mainCenteredSection": {
+            "sectionId": "0-0-0-5-1",
+            "subText": "Leviton Product line and Leviton Smart Panels",
+            "text": "LEVITON"
+          }
+        },
+        {
+          "imageSection": {
+            "sectionId": "0-0-0-5-2",
+            "imageFileName": "images/leviton-1.jpg"
+          }
+        },
+        {
+          "imageSection": {
+            "sectionId": "0-0-0-5-3",
+            "imageFileName": "images/leviton-2.jpg"
+          }
+        },
+        {
+          "imageSection": {
+            "sectionId": "0-0-0-5-4",
+            "imageFileName": "images/leviton-3.jpg"
+          }
+        },
+        {
+          "imageSection": {
+            "sectionId": "0-0-0-5-5",
+            "imageFileName": "images/leviton-4.jpg"
+          }
+        },
+        {
+          "imageSection": {
+            "sectionId": "0-0-0-5-6",
+            "imageFileName": "images/leviton-5.jpg"
+          }
+        },
+        {
+          "imageSection": {
+            "sectionId": "0-0-0-5-7",
+            "imageFileName": "images/leviton-6.jpg"
+          }
+        },
+        {
+          "imageSection": {
+            "sectionId": "0-0-0-5-1",
+            "imageFileName": "images/leviton-7.jpg"
+          }
+        }
+      ]
+    },
+    {
       "name": "Services",
       "pages": [
         {
-          "link": "ev-chargers",
-          "name": "EV Chargers",
+          "link": "commercial-residential-new-construction",
+          "name": "Commercial / Residential New Construction",
           "sections": [
             {
               "mainCenteredSection": {
@@ -71,13 +133,7 @@
                 "sectionId": "0-0-0-2-4",
                 "imageFileName": "images/ev-3.jpg"
               }
-            }
-          ]
-        },
-        {
-          "link": "new-lighting",
-          "name": "New Lighting",
-          "sections": [
+            },
             {
               "mainCenteredSection": {
                 "sectionId": "0-0-0-3-1",
@@ -93,22 +149,10 @@
             },
             {
               "imageSection": {
-                "sectionId": "0-0-0-3-3",
-                "imageFileName": "images/light-2.jpg"
-              }
-            },
-            {
-              "imageSection": {
                 "sectionId": "0-0-0-3-4",
                 "imageFileName": "images/light-3.jpg"
               }
-            }
-          ]
-        },
-        {
-          "link": "remodeling",
-          "name": "Remodeling",
-          "sections": [
+            },
             {
               "mainCenteredSection": {
                 "sectionId": "0-0-0-4-1",
@@ -146,6 +190,12 @@
                 "imageFileName": "images/remodel-5.jpg"
               }
             }
+          ]
+        },
+        {
+          "link": "24-7-service",
+          "name": "24/7 Service",
+          "sections": [
           ]
         }
       ]

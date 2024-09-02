@@ -34,7 +34,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+                "src/scripts/widget.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
