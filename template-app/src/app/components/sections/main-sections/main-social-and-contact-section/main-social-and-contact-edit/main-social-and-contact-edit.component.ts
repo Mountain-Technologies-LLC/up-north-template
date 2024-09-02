@@ -10,26 +10,41 @@ import { GlobalService } from '../../../../../services/global.service';
 })
 export class MainSocialAndContactEditComponent {
   mainSocialAndContactSection = input<MainSocialAndContactSection>();
-  sectionId = this.mainSocialAndContactSection()?.sectionId!;
 
   constructor(public globalService: GlobalService) { }
 
+  insertAfter() {
+    this.insert(true);
+  }
+
   insertBefore() {
+    this.insert();
+  }
+
+  changedSocialLink(event: Event) {
+    this.changed(event, "mainSocialAndContactSection", "socialLink", this.mainSocialAndContactSection()?.sectionId!);
+  }
+
+  changedSocialName(event: Event) {
+    this.changed(event, "mainSocialAndContactSection", "socialName", this.mainSocialAndContactSection()?.sectionId!);
+  }
+
+  changedSubText(event: Event) {
+    this.changed(event, "mainSocialAndContactSection", "subText", this.mainSocialAndContactSection()?.sectionId!);
+  }
+
+  changedText(event: Event) {
+    this.changed(event, "mainSocialAndContactSection", "text", this.mainSocialAndContactSection()?.sectionId!);
+  }
+
+  delete() {
     const data: Data = this.globalService.data.value;
+    const sectionId = this.mainSocialAndContactSection()?.sectionId!;
 
     let pageHomeSections = data.pageHome.sections;
+    var index = pageHomeSections.findIndex(x => x.mainSocialAndContactSection?.sectionId == sectionId);
 
-    console.log(pageHomeSections)
-
-    pageHomeSections.push({
-      mainSocialAndContactSection: {
-        sectionId: crypto.randomUUID(),
-        socialLink: "",
-        socialName: "",
-        subText: "",
-        text: "",
-      }
-    });
+    pageHomeSections.splice(index, 1);
 
     const pages = data.pages;
 
@@ -39,32 +54,44 @@ export class MainSocialAndContactEditComponent {
       pages: pages,
     };
 
-    console.log(2, newValue)
-
     this.globalService.data.next(newValue);
   }
 
-  changedSocialLink(event: Event) {
-    this.changed(event, "mainSocialAndContactSection", "socialLink", this.sectionId);
-  }
+  private insert(isAfter: boolean = false) {
+    const data: Data = this.globalService.data.value;
+    const sectionContextId = this.mainSocialAndContactSection()?.sectionId!;
 
-  changedSocialName(event: Event) {
-    this.changed(event, "mainSocialAndContactSection", "socialName", this.sectionId);
-  }
+    let pageHomeSections = data.pageHome.sections;
+    var insertPos = pageHomeSections.findIndex(x => x.mainSocialAndContactSection?.sectionId == sectionContextId) + (isAfter ? 1 : 0);
 
-  changedSubText(event: Event) {
-    this.changed(event, "mainSocialAndContactSection", "subText", this.sectionId);
-  }
+    const newSection: Section = {
+      mainSocialAndContactSection: {
+        sectionId: crypto.randomUUID(),
+        socialLink: "",
+        socialName: "",
+        subText: "",
+        text: "",
+      }
+    };
 
-  changedText(event: Event) {
-    this.changed(event, "mainSocialAndContactSection", "text", this.sectionId);
+    pageHomeSections.splice(insertPos, 0, newSection);
+
+    const pages = data.pages;
+
+    const newValue: Data = {
+      ...data,
+      pageHome: { ...data.pageHome, sections: pageHomeSections },
+      pages: pages,
+    };
+
+    this.globalService.data.next(newValue);
   }
 
   private changed(event: Event, sectionName: keyof Section, sectionPropertyName: string, sectionId: string) {
     const data: Data = this.globalService.data.value;
 
     const pageHomeSections = data.pageHome.sections.map(x => {
-      if (x[sectionName]?.sectionId ?? "" == sectionId) {
+      if (x[sectionName]!= null && x[sectionName]?.sectionId === sectionId) {
         if (x.mainSocialAndContactSection != null) {
           x.mainSocialAndContactSection = { ...x.mainSocialAndContactSection, [sectionPropertyName]: (event.target as HTMLInputElement).value }
         }
@@ -75,7 +102,7 @@ export class MainSocialAndContactEditComponent {
 
     const pages = data.pages.map(page => {
       page.sections = page.sections?.map(x => {
-        if (x[sectionName]?.sectionId ?? "" == sectionId) {
+        if (x[sectionName]!= null && x[sectionName]?.sectionId === sectionId) {
           if (x.mainSocialAndContactSection != null) {
             x.mainSocialAndContactSection = { ...x.mainSocialAndContactSection, [sectionPropertyName]: (event.target as HTMLInputElement).value }
           }
@@ -86,7 +113,7 @@ export class MainSocialAndContactEditComponent {
 
       page.pages = page.pages?.map(subPage => {
         subPage.sections = subPage.sections?.map(x => {
-          if (x[sectionName]?.sectionId ?? "" == sectionId) {
+          if (x[sectionName]!= null && x[sectionName]?.sectionId === sectionId) {
             if (x.mainSocialAndContactSection != null) {
               x.mainSocialAndContactSection = { ...x.mainSocialAndContactSection, [sectionPropertyName]: (event.target as HTMLInputElement).value }
             }

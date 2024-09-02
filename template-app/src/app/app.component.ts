@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, signal } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import * as data from '../data.json';
 import { Data } from '../data';
@@ -20,15 +20,7 @@ export class AppComponent implements OnInit {
   constructor (
     @Inject(DOCUMENT) private document: Document,
     @Inject(APP_BASE_HREF) public baseHref: string,
-    public globalService: GlobalService)
-  {
-    this.globalService.data.subscribe({
-      next: newValue => {
-        console.log("AppComponent subscribe")
-        this.data = newValue;
-      }
-    });
-  }
+    public globalService: GlobalService) { }
 
   ngOnInit(): void {
     const html = this.document.querySelector("html");
