@@ -1,44 +1,21 @@
 {
-  "companyName": "Template Website",
-  "email": "email@company.com",
-  "footerImageFileName": "footer-bg.jpg",
+  "companyName": "Bright Guy Electric",
+  "email": "Brightguy&#64;gmail.com",
   "pageHome": {
     "sections": [
       {
         "mainSocialAndContactSection": {
           "sectionId": "0-0-0-0-1",
-          "socialLink": "https://www.facebook.com",
+          "socialLink": "https://www.facebook.com/profile.php?id=61555169669613",
           "socialName": "Facebook",
-          "socialUsername": "@facebook",
-          "subText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "text": "Your one stop website maker!"
+          "subText": "Elevate your home with Bright Guy Electric, your trusted partner in electrical solutions. Our expert team brings quality in-home services, ensuring your safety and comfort. From installations to repairs, we power your space with reliability. Experience excellence in every connection with Bright Guy Electric.",
+          "text": "Lighting the path with unwavering integrity and superior craftsmanship!"
         }
       },
       {
         "imageSection": {
           "sectionId": "0-0-0-0-2",
-          "imageFileName": "/images/logo.png",
-          "imageFirst": true,
-          "subText": "Porttitor leo a diam sollicitudin tempor id eu nisl. Cursus in hac habitasse platea dictumst quisque sagittis purus. Mi tempus imperdiet nulla malesuada pellentesque elit. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Eget magna fermentum iaculis eu non. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Molestie a iaculis at erat pellentesque. Tincidunt dui ut ornare lectus sit amet est. Elit pellentesque habitant morbi tristique senectus et netus et.",
-          "text": "Eget est lorem ipsum"
-        }
-      },
-      {
-        "imageSection": {
-          "sectionId": "0-0-0-0-3",
-          "imageFileName": "/images/logo.png",
-          "imageFirst": false,
-          "subText": "Eu sem integer vitae justo eget magna.",
-          "text": "Eros in cursus turpis"
-        }
-      },
-      {
-        "imageSection": {
-          "sectionId": "0-0-0-0-4",
-          "imageFileName": "/images/logo.png",
-          "imageFirst": true,
-          "subText": "At ultrices mi tempus imperdiet.",
-          "text": "Z"
+          "imageFileName": "/images/header.png"
         }
       },
       {
@@ -46,16 +23,16 @@
           "sectionId": "0-0-0-0-5",
           "gridColsSection": [
             {
-              "subText": "Netus et malesuada fames ac turpis egestas maecenas pharetra convallis.",
-              "text": "One"
+              "subText": "Ask how we can give you a lifetime warranty on your homes electrical system!!!",
+              "text": "LIFETIME WARRANTY"
             },
             {
-              "subText": "Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget.",
-              "text": "Two"
+              "subText": "Ask about the new technology designed to protect your sensitive electronics plugged into your home.",
+              "text": "ELECTRONICS PROTECTION"
             },
             {
-              "subText": "Nunc consequat interdum varius sit amet mattis.",
-              "text": "Three"
+              "subText": "Ask about the new fire safety devices specifically designed to help prevent electrical fires. AFCI breakers will detect irregularities correlated to fire events and stop them before they start.",
+              "text": "LIFE SAVING DEVICES"
             }
           ]
         }
@@ -64,97 +41,138 @@
   },
   "pages": [
     {
-      "link": "page-offer",
-      "name": "Page Offer",
-      "sections": [
+      "name": "Services",
+      "pages": [
         {
-          "mainCenteredSection": {
-            "sectionId": "0-0-0-0-6",
-            "subText": "Tincidunt augue interdum velit euismod. Fames ac turpis egestas sed tempus urna et. Cras fermentum odio eu feugiat pretium nibh ipsum. Ut venenatis tellus in metus vulputate eu scelerisque felis. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Vitae aliquet nec ullamcorper sit amet risus.",
-            "text": "Best Deals in Town"
-          }
+          "link": "ev-chargers",
+          "name": "EV Chargers",
+          "sections": [
+            {
+              "mainCenteredSection": {
+                "sectionId": "0-0-0-2-1",
+                "subText": "Buy one from me or supply your own! (FREE installation with qualifying purchase).",
+                "text": "EV CHARGERS"
+              }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-2-2",
+                "imageFileName": "images/ev-1.jpg"
+              }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-2-3",
+                "imageFileName": "images/ev-2.jpg"
+              }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-2-4",
+                "imageFileName": "images/ev-3.jpg"
+              }
+            }
+          ]
         },
         {
-          "offerSection": {
-            "sectionId": "0-0-0-0-7",
-            "offers": [
-              {
-                "buttonText": "Start here",
-                "guarantees": [
-                  {
-                    "text": "Eget nulla facilisi etiam dignissim."
-                  },
-                  {
-                    "text": "Aliquam eleifend mi in nulla posuere."
-                  },
-                  {
-                    "bold": true,
-                    "text": "Maecenas volutpat blandit aliquam etiam."
-                  }
-                ],
-                "moreGuarantees": [
-                  {
-                    "text": "Morbi tempus iaculis urna id."
-                  }
-                ],
-                "price": "$100",
-                "subPrice": "/year",
-                "subText": "Volutpat maecenas volutpat blandit aliquam etiam erat. Risus sed vulputate odio ut enim blandit.",
-                "text": "Offer Level Basic"
-              },
-              {
-                "subText": "Nec dui nunc mattis enim ut tellus. Amet consectetur adipiscing elit ut aliquam purus sit amet luctus.",
-                "text": "Offer Level Professional",
-                "isSkeleton": true,
-                "subOfferText": "*Disclaimer"
-              },
-              {
-                "buttonText": "Contact sales",
-                "subText": "Diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
-                "text": "Offer Level Enterprise",
-                "price": "Custom",
-                "priceText": "Purus sit amet luctus venenatis lectus magna. Nisl purus in mollis nunc sed.",
-                "guarantees": [
-                  {
-                    "text": "Everything in Offer Level Basic."
-                  }
-                ],
-                "subOfferLink": "",
-                "subOfferText": "Our Certifications"
+          "link": "new-lighting",
+          "name": "New Lighting",
+          "sections": [
+            {
+              "mainCenteredSection": {
+                "sectionId": "0-0-0-3-1",
+                "subText": "Elevate your surroundings and create an ambiance that resonates with sophistication.",
+                "text": "NEW LIGHTING"
               }
-            ]
-          }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-3-2",
+                "imageFileName": "images/light-1.jpg"
+              }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-3-3",
+                "imageFileName": "images/light-2.jpg"
+              }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-3-4",
+                "imageFileName": "images/light-3.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "link": "remodeling",
+          "name": "Remodeling",
+          "sections": [
+            {
+              "mainCenteredSection": {
+                "sectionId": "0-0-0-4-1",
+                "subText": "Precision in every detail, care in every corner. Our remodels redefine excellence with meticulous attention and a commitment to leaving your home flawless. Elevate your space without the worry - Where transformation meets perfection.",
+                "text": "REMODELING"
+              }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-4-2",
+                "imageFileName": "images/remodel-1.jpg"
+              }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-4-3",
+                "imageFileName": "images/remodel-2.jpg"
+              }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-4-4",
+                "imageFileName": "images/remodel-3.jpg"
+              }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-4-5",
+                "imageFileName": "images/remodel-4.jpg"
+              }
+            },
+            {
+              "imageSection": {
+                "sectionId": "0-0-0-4-6",
+                "imageFileName": "images/remodel-5.jpg"
+              }
+            }
+          ]
         }
       ]
     },
     {
-      "name": "Dropdown 1",
-      "pages": [
+      "name": "Company",
+      "link": "company",
+      "sections": [
         {
-          "link": "page-a",
-          "name": "Page A",
-          "sections": [
-            {
-              "mainCenteredSection": {
-                "sectionId": "0-0-0-0-8",
-                "subText": "Tincidunt augue interdum velit euismod in. Turpis massa sed elementum tempus egestas.",
-                "text": "Page A"
-              }
-            }
-          ]
+          "textSection": {
+            "sectionId": "0-0-0-1-1",
+            "subText": "OUR MISSION IS TO ILLUMINATE YOUR LIFE WITH EXCELLENCE AND ENSURE COMPLETE AND UNDENIABLE SAFETY. WE ARE DEDICATED TO PROVIDING UNPARALLELED ELECTRICAL SOLUTIONS THAT PRIORITIZE SAFETY, EFFICIENCY, AND INNOVATION. COMMITTED TO INTEGRITY AND TRANSPARENCY, WE STRIVE TO BUILD LASTING RELATIONSHIPS WITH OUR CLIENTS. BY COMBINING TECHNICAL EXPERTISE WITH A CLIENT-CENTRIC APPROACH, WE AIM TO EXCEED EXPECTATIONS AND ENSURE THE SEAMLESS INTEGRATION OF CUTTING-EDGE ELECTRICAL SYSTEMS INTO YOUR HOME. BRIGHT GUY ELECTRIC IS NOT JUST ABOUT FIXING WIRES; IT'S ABOUT EMPOWERING YOUR SPACE WITH RELIABILITY, COMFORT, AND A BRIGHT FUTURE.",
+            "text": "Our Mission"
+          }
         },
         {
-          "link": "page-b",
-          "name": "Page B",
-          "sections": [
-            {
-              "mainCenteredSection": {
-                "sectionId": "0-0-0-0-9",
-                "subText": "Maecenas ultricies mi eget mauris pharetra et ultrices neque ornare. Pretium viverra suspendisse potenti nullam ac tortor vitae purus. Egestas egestas fringilla phasellus faucibus scelerisque eleifend.",
-                "text": "Page B"
-              }
-            }
-          ]
+          "textSection": {
+            "sectionId": "0-0-0-1-2",
+            "subText": "OUR CORE VALUES REVOLVE AROUND YOUR HOME'S SAFETY, COMFORT, AND SATISFACTION. WE PRIORITIZE TRANSPARENT COMMUNICATION, ENSURING YOU'RE INFORMED AT EVERY STEP OF THE PROCESS. OUR SKILLED AND RELIABLE TEAM IS COMMITTED TO DELIVERING TOP-NOTCH ELECTRICAL SOLUTIONS THAT NOT ONLY MEET INDUSTRY STANDARDS BUT ALSO EXCEED YOUR EXPECTATIONS. WE UNDERSTAND THE IMPORTANCE OF YOUR HOME, AND OUR DEDICATION TO QUALITY WORKMANSHIP, INTEGRITY, AND A CUSTOMER-FIRST APPROACH SETS US APART. TRUST US TO BRING EXPERTISE AND A PERSONAL TOUCH TO EVERY PROJECT, MAKING YOUR HOME A SAFER AND MORE EFFICIENT PLACE FOR YOU AND YOUR FAMILY.",
+            "text": "Core Values"
+          }
+        },
+        {
+          "imageSection": {
+            "sectionId": "0-0-0-1-3",
+            "imageFileName": "images/company-1.jpg"
+          }
         }
       ]
     },
@@ -163,34 +181,39 @@
       "link": "contact",
       "sections": [
         {
-          "mainImageSection": {
-          "sectionId": "0-0-0-0-10",
-            "imageFileName": "walter-1.jpg"
+          "contactSection": {
+            "sectionId": "0-0-0-0-11",
+            "email": "Brightguy&#64;gmail.com",
+            "phoneNumber": "(612) 461-8256",
+            "phoneTel": "+16124618256",
+            "socialLink": "https://www.facebook.com/profile.php?id=61555169669613",
+            "socialName": "Facebook",
+            "socialUsername": "Bright-Guy-Electric",
+            "subText": "Call, email, or send us a message on Facebook with your questions and feedback.",
+            "text": "Contact Us"
           }
         },
         {
-          "contactSection": {
-            "sectionId": "0-0-0-0-11",
-            "email": "email@company.com",
-            "phoneNumber": "(###) ###-####",
-            "phoneTel": "+10000000000",
-            "socialLink": "https://www.facebook.com",
-            "socialName": "Facebook",
-            "socialUsername": "@facebook",
-            "subText": "Call, email, or send us a message on Facebook with your questions and feedback.",
-            "text": "Contact Us"
+          "imageSection": {
+            "sectionId": "0-0-0-0-12",
+            "imageFileName": "images/contact-1.jpg"
+          }
+        },
+        {
+          "imageSection": {
+            "sectionId": "0-0-0-0-13",
+            "imageFileName": "images/contact-2.jpg"
           }
         }
       ]
     }
   ],
-  "phoneNumber": "(###) ###-####",
-  "phoneTel": "+10000000000",
-  "socialLink": "https://www.facebook.com",
+  "phoneNumber": "(612) 461-8256",
+  "phoneTel": "16124618256",
+  "socialLink": "https://www.facebook.com/profile.php?id=61555169669613",
   "socialName": "Facebook",
-  "socialUsername": "@facebook",
-  "tagline": "Just make it.",
-  "theme-note": "Remove the -[theme] below to change the theme of the template. And also add -[theme] to the current.",
-  "theme": "light",
+  "socialUsername": "Bright-Guy-Electric",
+  "tagline": "Unquestionable safety and precision",
+  "theme": "bumblebee",
   "usernameFacebook": "@company"
 }

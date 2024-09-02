@@ -12,7 +12,7 @@ import { GlobalService } from '../../services/global.service';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  editing = input<boolean>();
+  editing = input<boolean>(false);
   data = input<Data>();
 
   constructor (public globalService: GlobalService) { }

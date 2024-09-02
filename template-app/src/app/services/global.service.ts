@@ -10,5 +10,5 @@ import { Data } from '../../data';
 })
 export class GlobalService {
   data = new BehaviorSubject<Data>(data);
-  editing = new BehaviorSubject<boolean>(true);
+  editing = new BehaviorSubject<boolean>(false);
 }
