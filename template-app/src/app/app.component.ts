@@ -20,15 +20,24 @@ export class AppComponent implements OnInit {
   constructor (
     @Inject(DOCUMENT) private document: Document,
     @Inject(APP_BASE_HREF) public baseHref: string,
-    public globalService: GlobalService) { }
+    public globalService: GlobalService) {
+    this.globalService.data.subscribe({
+      next: newValue => {
+        const setTheme = this.data.theme == newValue.theme ? false : true;
+
+        this.data = newValue;
+
+        if (setTheme) {
+          this.setTheme();
+        }
+      }
+    });
+  }
 
   ngOnInit(): void {
-    const html = this.document.querySelector("html");
-    const faviconLink = this.document.querySelector('html head link[type="image/x-icon"]');
+    this.setTheme();
 
-    if (html != null) {
-      html.setAttribute("data-theme", this.data.theme);
-    }
+    const faviconLink = this.document.querySelector('html head link[type="image/x-icon"]');
 
     if (faviconLink != null) {
       faviconLink.setAttribute("href", this.baseHref + "/images/favicon.png");
@@ -46,4 +55,21 @@ export class AppComponent implements OnInit {
     : "unset";
   currentYear: number = new Date().getFullYear();
   tagline: string = this.data.tagline;
+
+  private setTheme() {
+    this.theme = this.data.theme;
+
+    const html = this.document.querySelector("html");
+
+    if (html != null) {
+      html.setAttribute("data-theme", this.data.theme);
+
+      const metaTheme = html.querySelector("head meta[name='theme-color']");
+
+      if (typeof window !== "undefined" && metaTheme != null) {
+        const base100 = window.getComputedStyle(this.document.body).getPropertyValue('--b1');
+        metaTheme.setAttribute("content", 'oklch(' + base100 + ')');
+      }
+    }
+  }
 }

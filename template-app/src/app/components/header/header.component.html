@@ -30,7 +30,7 @@
             type="text"
             class="input input-bordered w-full" />
         </label>
-        <label class="form-control w-full">
+        <label class="form-control w-full pointer-events-none">
           <div class="label font-medium leading-6">
             <span class="label-text">Website Theme</span>
           </div>
@@ -39,7 +39,7 @@
             <button
               *ngFor="let theme of themes"
               (click)="changedTheme(theme)"
-              class="outline-base-content text-start outline-offset-4">
+              class="outline-base-content text-start outline-offset-4 pointer-events-auto">
               <span
                 [attr.data-theme]="theme"
                 class="bg-base-100 rounded-btn text-base-content block w-full cursor-pointer font-sans">

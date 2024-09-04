@@ -1,4 +1,4 @@
-import { Component, effect, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Page } from '../../../../data';
 import { RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
@@ -12,10 +12,4 @@ import { NgFor, NgIf } from '@angular/common';
 export class NavbarComponent {
   companyName = input<string>();
   pages = input<Page[]>();
-
-  constructor() {
-    effect(() => {
-      console.log("companyName changed: ", this.companyName());
-    });
-  }
 }

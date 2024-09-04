@@ -67,10 +67,10 @@ export class MainSocialAndContactEditComponent {
     const newSection: Section = {
       mainSocialAndContactSection: {
         sectionId: crypto.randomUUID(),
-        socialLink: "",
-        socialName: "",
-        subText: "",
-        text: "",
+        socialLink: "https://mountaintechnologiesllc.com",
+        socialName: "?????",
+        subText: "Sub Text",
+        text: "Main Text",
       }
     };
 

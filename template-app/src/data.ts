@@ -18,6 +18,7 @@ export type PageHome = {
 }
 
 export type Page = {
+  pageId: string;
   name: string;
   link?: string | null;
   pages?: Page[] | null;
