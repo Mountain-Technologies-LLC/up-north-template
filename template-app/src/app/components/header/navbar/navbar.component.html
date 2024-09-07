@@ -1,20 +1,20 @@
 <div class="navbar">
   <div class="navbar-start">
     <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" title="Menu button">
+      <div appFocusRemover tabindex="0" role="button" class="btn btn-ghost lg:hidden" title="Menu button">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
       <ul tabindex="0" class="dropdown-content z-[1] menu menu-sm p-2 mt-3 shadow bg-base-100 rounded-box w-52">
         <li *ngFor="let page of pages()">
-          <a *ngIf="page.sections != null" routerLink="/{{page.link}}" onclick="document.activeElement.blur()">
+          <a appFocusRemover *ngIf="page.sections != null" routerLink="/{{page.link}}">
             {{ page.name }}
           </a>
           <summary *ngIf="page.pages != null">{{ page.name }}</summary>
           <ul *ngIf="page.pages != null" class="p-2">
             <li *ngFor="let subPage of page.pages">
-              <a routerLink="/{{subPage.link}}" class="text-nowrap" onclick="document.activeElement.blur()">{{subPage.name}}</a>
+              <a appFocusRemover routerLink="/{{subPage.link}}" class="text-nowrap">{{subPage.name}}</a>
             </li>
           </ul>
         </li>

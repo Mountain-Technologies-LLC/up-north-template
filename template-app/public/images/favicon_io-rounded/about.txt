@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Prata
+- Font Author: Copyright 2011 The Prata Project Authors (contact@cyreal.org)
+- Font Source: https://fonts.gstatic.com/s/prata/v20/6xKhdSpbNNCT-vWIAG_5LWwJ.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

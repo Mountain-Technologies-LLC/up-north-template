@@ -4,11 +4,12 @@ import { NgFor, NgIf } from '@angular/common';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { FormsModule } from '@angular/forms';
 import { GlobalService } from '../../services/global.service';
+import { FocusRemoverDirective } from '../../shared/focus-remover.directive';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FormsModule, NgFor, NgIf, NavbarComponent],
+  imports: [FocusRemoverDirective, FormsModule, NgFor, NgIf, NavbarComponent],
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {

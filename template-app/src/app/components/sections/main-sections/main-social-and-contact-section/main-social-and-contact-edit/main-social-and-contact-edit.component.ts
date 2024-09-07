@@ -1,11 +1,12 @@
 import { Component, input } from '@angular/core';
 import { Data, MainSocialAndContactSection, Section } from '../../../../../../data';
 import { GlobalService } from '../../../../../services/global.service';
+import { FocusRemoverDirective } from '../../../../../shared/focus-remover.directive';
 
 @Component({
   selector: 'app-main-social-and-contact-edit',
   standalone: true,
-  imports: [],
+  imports: [FocusRemoverDirective],
   templateUrl: './main-social-and-contact-edit.component.html',
 })
 export class MainSocialAndContactEditComponent {
