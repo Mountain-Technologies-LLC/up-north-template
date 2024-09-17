@@ -1,0 +1,28 @@
+{
+  "name": "up-north-template",
+  "version": "0.0.0",
+  "description": "Node package for the repository as a whole",
+  "scripts": {
+    "build": "npm run build --if-present --prefix ./template-app -- --output-path ../dist",
+    "synth": "cdk synth --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\"",
+    "deploy": "cdk deploy --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\" --context name=test-com",
+    "diff": "cdk diff --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\" --context name=test-com",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "destroy": "cdk destroy --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\" --context name=test-com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mountain-Technologies-LLC/up-north-template.git"
+  },
+  "keywords": [
+    "angular",
+    "aws",
+    "dotnet"
+  ],
+  "author": "Mountain Technologies LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mountain-Technologies-LLC/up-north-template/issues"
+  },
+  "homepage": "https://github.com/Mountain-Technologies-LLC/up-north-template#readme"
+}
