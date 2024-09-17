@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using Amazon.CDK;
 
 namespace Infrastructure
@@ -18,6 +19,8 @@ namespace Infrastructure
 
             PreFlightChecklist(app);
 
+            var stackName = new string(name.Where(char.IsLetterOrDigit).ToArray());
+
             new InfrastructureStack(app, "InfrastructureStack", new StackProps
             {
                 // If you don't specify 'env', this stack will be environment-agnostic.
@@ -31,7 +34,7 @@ namespace Infrastructure
                     Account = string.IsNullOrEmpty(account) ? System.Environment.GetEnvironmentVariable("CDK_DEFAULT_ACCOUNT") : account,
                     Region = string.IsNullOrEmpty(region) ? System.Environment.GetEnvironmentVariable("CDK_DEFAULT_REGION") : region,
                 },
-                StackName = "InfrastructureStack-" + name,
+                StackName = "InfrastructureStack-" + stackName,
 
                 // Uncomment the next block if you know exactly what Account and Region you
                 // want to deploy the stack to.

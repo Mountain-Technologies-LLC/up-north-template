@@ -17,7 +17,8 @@
 1. Deploy to AWS
    - See [infrastructure README.md](./infrastructure/README.md) for more.
    1. ```npm run build```
-   1. ```npm run synth -- --context name=test-com```
-   1. ```npm run deploy -- --context name=test-com```
+   1. ```npm run synth -- --context name=test.com```
+   1. ```npm run diff -- --context name=test.com```
+   1. ```npm run deploy -- --context name=test.com```
    1. Destroy from AWS
-      1. ```npm run destroy -- --context name=test-com```
+      1. ```npm run destroy -- --context name=test.com```

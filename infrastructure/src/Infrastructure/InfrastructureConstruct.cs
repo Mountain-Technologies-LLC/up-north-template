@@ -18,7 +18,7 @@ namespace Infrastructure
 
             var scopedAws = new ScopedAws(this);
 
-            var bucketName = $"{scopedAws.Region}-{scopedAws.AccountId}-{props.Name}";
+            var bucketName = $"{scopedAws.AccountId}-{props.Name}";
 
             var s3Bucket = new Bucket(
                 this, "s3Bucket",
