@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { PageService } from './page.service';
 import { Router } from '@angular/router';
-import { Section } from '../../../data';
+import { Section } from '../../../schema';
 import { SectionsComponent } from "../sections/sections.component";
 import { GlobalService } from '../../services/global.service';
 
@@ -19,9 +19,9 @@ export class PageComponent {
   name: string = this.page?.name ?? "";
   sections: Section[] = this.page?.sections ?? [];
 
-  constructor (public globalService: GlobalService)
+  constructor (private readonly globalService: GlobalService)
   {
-    this.globalService.data.subscribe({
+    this.globalService.schema.subscribe({
       next: newValue => {
         const page = newValue.pages.find(x => x.pageId == this.pageId || x.pages?.some(x => x.pageId == this.pageId));
 

@@ -1,5 +1,5 @@
 import { Component, Inject, Input } from '@angular/core';
-import { ImageSection } from '../../../../data';
+import { ImageSection } from '../../../../schema';
 import { APP_BASE_HREF, NgClass, NgFor, NgIf } from '@angular/common';
 
 @Component({

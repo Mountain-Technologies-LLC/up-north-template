@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import * as data from '../../../data.json';
-import { Data, PageHome } from '../../../data';
+import { Schema, PageHome } from '../../../schema';
+import { GlobalService } from '../../services/global.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 export class HomeService {
-  private readonly data: Data = data;
+  constructor (private readonly globalService: GlobalService) { }
+
+  private readonly schema: Schema = this.globalService.schema.value;
 
   getHomeData(): PageHome {
-    return this.data.pageHome;
+    return this.schema.pageHome;
   }
 }

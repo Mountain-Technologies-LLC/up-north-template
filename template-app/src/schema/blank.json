@@ -1,0 +1,30 @@
+{
+  "companyName": "Template Website",
+  "email": "email@company.com",
+  "pageHome": {
+    "pageId": "0-0-0-0-0",
+    "sections": [
+      {
+        "mainSocialAndContactSection": {
+          "sectionId": "0-0-0-0-1",
+          "socialLink": "https://www.facebook.com",
+          "socialName": "Facebook",
+          "socialUsername": "@facebook",
+          "subText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "text": "Your one stop website maker!"
+        }
+      }
+    ]
+  },
+  "pages": [
+  ],
+  "phoneNumber": "(###) ###-####",
+  "phoneTel": "+10000000000",
+  "socialLink": "https://www.facebook.com",
+  "socialName": "Facebook",
+  "socialUsername": "@facebook",
+  "tagline": "Just make it.",
+  "theme-note": "Remove the -[theme] below to change the theme of the template. And also add -[theme] to the current.",
+  "theme": "light",
+  "usernameFacebook": "@company"
+}

@@ -1,7 +1,7 @@
 # up-north-template
 
 - Follow how to set up Angular website in README in template-app.
-- Edit template-app/src/data.json to customize your website.
+- Edit template-app/src/schema/demo.json to customize your website.
 - Export JSON to see changes in data.json.
 - Profit.
 

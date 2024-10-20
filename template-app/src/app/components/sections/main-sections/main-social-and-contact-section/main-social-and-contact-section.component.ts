@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { MainSocialAndContactSection } from '../../../../../data';
+import { MainSocialAndContactSection } from '../../../../../schema';
 import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
 

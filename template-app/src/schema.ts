@@ -1,4 +1,4 @@
-export type Data = {
+export type Schema = {
   companyName: string;
   email: string;
   footerImageFileName?: string | null;

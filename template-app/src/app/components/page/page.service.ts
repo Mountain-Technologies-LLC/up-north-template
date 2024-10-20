@@ -1,20 +1,20 @@
-import { Injectable, signal } from '@angular/core';
-import { Data, Page } from '../../../data';
-import * as data from '../../../data.json';
+import { Injectable } from '@angular/core';
+import { Schema, Page } from '../../../schema';
+import { GlobalService } from '../../services/global.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 export class PageService {
-  data = signal<Data>(data);
+  constructor (private readonly globalService: GlobalService) { }
+
+  private readonly schema: Schema = this.globalService.schema.value;
 
   getPageByLink(url: string): Page | undefined {
-    const page = this.data().pages.find(x => '/' + x.link == url);
+    const page = this.schema.pages.find(x => '/' + x.link == url);
     if (page !== undefined) {
       return page;
     }
 
-    const subPage = this.data().pages
+    const subPage = this.schema.pages
       .find(p => p.pages?.find(sp => '/' + sp.link == url))
       ?.pages?.find(x => '/' + x.link == url);
 

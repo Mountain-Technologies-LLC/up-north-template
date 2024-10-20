@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { HomeService } from './home.service';
-import { Section } from '../../../data';
+import { Section } from '../../../schema';
 import { SectionsComponent } from "../sections/sections.component";
 import { GlobalService } from '../../services/global.service';
 
@@ -16,9 +16,9 @@ export class HomeComponent {
 
   sections: Section[] = this.homeService.getHomeData().sections;
 
-  constructor (public globalService: GlobalService)
+  constructor (private readonly globalService: GlobalService)
   {
-    this.globalService.data.subscribe({
+    this.globalService.schema.subscribe({
       next: newValue => {
         this.sections = newValue.pageHome.sections;
       }

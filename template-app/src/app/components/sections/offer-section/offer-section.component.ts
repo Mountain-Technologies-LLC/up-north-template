@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { OfferSection } from '../../../../data';
+import { OfferSection } from '../../../../schema';
 import { NgClass } from '@angular/common';
 import { OfferSectionOfferComponent } from './offer-section-offer/offer-section-offer.component';
 

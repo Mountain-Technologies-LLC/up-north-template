@@ -1,23 +1,29 @@
 import { Injectable } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 import { RouterStateSnapshot, TitleStrategy } from "@angular/router";
-import { Data } from "../data";
-import * as data from '../data.json';
+import { GlobalService } from "./services/global.service";
 
 @Injectable({providedIn: 'root'})
 export class TemplatePageTitleStrategy extends TitleStrategy {
-  private readonly data: Data = data;
+  constructor(
+    private readonly title: Title,
+    private readonly globalService: GlobalService
+  ) {
+    console.log('title', title);
+    console.log('globalService', globalService);
 
-  constructor(private readonly title: Title) {
     super();
   }
 
   override updateTitle(routerState: RouterStateSnapshot) {
+    console.log('this.title', this.title);
     const customTitle = this.buildTitle(routerState) || '';
     const title = this.buildTitle(routerState);
 
     if (title !== undefined) {
-      this.title.setTitle(`${customTitle} - ${this.data.companyName}`);
+      this.title.setTitle(`${customTitle} - ${this.globalService.schema.value.companyName}`);
     }
+
+    console.log('this.title', this.title);
   }
 }

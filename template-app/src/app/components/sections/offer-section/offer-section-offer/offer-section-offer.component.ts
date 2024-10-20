@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { OfferSectionOffer } from '../../../../../data';
+import { OfferSectionOffer } from '../../../../../schema';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 

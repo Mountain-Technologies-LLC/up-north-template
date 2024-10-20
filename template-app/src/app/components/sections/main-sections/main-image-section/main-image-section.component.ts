@@ -1,5 +1,5 @@
 import { Component, Inject, Input } from '@angular/core';
-import { MainImageSection } from '../../../../../data';
+import { MainImageSection } from '../../../../../schema';
 import { APP_BASE_HREF } from '@angular/common';
 
 @Component({

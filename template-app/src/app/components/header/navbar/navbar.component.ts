@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Page } from '../../../../data';
+import { Page } from '../../../../schema';
 import { RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 import { FocusRemoverDirective } from '../../../shared/focus-remover.directive';

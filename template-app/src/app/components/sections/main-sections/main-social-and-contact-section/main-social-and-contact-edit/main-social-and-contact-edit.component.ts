@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Data, MainSocialAndContactSection, Section } from '../../../../../../data';
+import { MainSocialAndContactSection, Schema, Section } from '../../../../../../schema';
 import { GlobalService } from '../../../../../services/global.service';
 import { FocusRemoverDirective } from '../../../../../shared/focus-remover.directive';
 
@@ -12,7 +12,7 @@ import { FocusRemoverDirective } from '../../../../../shared/focus-remover.direc
 export class MainSocialAndContactEditComponent {
   mainSocialAndContactSection = input<MainSocialAndContactSection>();
 
-  constructor(public globalService: GlobalService) { }
+  constructor(private readonly globalService: GlobalService) { }
 
   insertAfter() {
     this.insert(true);
@@ -39,30 +39,30 @@ export class MainSocialAndContactEditComponent {
   }
 
   delete() {
-    const data: Data = this.globalService.data.value;
+    const schema: Schema = this.globalService.schema.value;
     const sectionId = this.mainSocialAndContactSection()?.sectionId!;
 
-    let pageHomeSections = data.pageHome.sections;
+    let pageHomeSections = schema.pageHome.sections;
     var index = pageHomeSections.findIndex(x => x.mainSocialAndContactSection?.sectionId == sectionId);
 
     pageHomeSections.splice(index, 1);
 
-    const pages = data.pages;
+    const pages = schema.pages;
 
-    const newValue: Data = {
-      ...data,
-      pageHome: { ...data.pageHome, sections: pageHomeSections },
+    const newValue: Schema = {
+      ...schema,
+      pageHome: { ...schema.pageHome, sections: pageHomeSections },
       pages: pages,
     };
 
-    this.globalService.data.next(newValue);
+    this.globalService.schema.next(newValue);
   }
 
   private insert(isAfter: boolean = false) {
-    const data: Data = this.globalService.data.value;
+    const schema: Schema = this.globalService.schema.value;
     const sectionContextId = this.mainSocialAndContactSection()?.sectionId!;
 
-    let pageHomeSections = data.pageHome.sections;
+    let pageHomeSections = schema.pageHome.sections;
     var insertPos = pageHomeSections.findIndex(x => x.mainSocialAndContactSection?.sectionId == sectionContextId) + (isAfter ? 1 : 0);
 
     const newSection: Section = {
@@ -77,21 +77,21 @@ export class MainSocialAndContactEditComponent {
 
     pageHomeSections.splice(insertPos, 0, newSection);
 
-    const pages = data.pages;
+    const pages = schema.pages;
 
-    const newValue: Data = {
-      ...data,
-      pageHome: { ...data.pageHome, sections: pageHomeSections },
+    const newValue: Schema = {
+      ...schema,
+      pageHome: { ...schema.pageHome, sections: pageHomeSections },
       pages: pages,
     };
 
-    this.globalService.data.next(newValue);
+    this.globalService.schema.next(newValue);
   }
 
   private changed(event: Event, sectionName: keyof Section, sectionPropertyName: string, sectionId: string) {
-    const data: Data = this.globalService.data.value;
+    const schema: Schema = this.globalService.schema.value;
 
-    const pageHomeSections = data.pageHome.sections.map(x => {
+    const pageHomeSections = schema.pageHome.sections.map(x => {
       if (x[sectionName]!= null && x[sectionName]?.sectionId === sectionId) {
         if (x.mainSocialAndContactSection != null) {
           x.mainSocialAndContactSection = { ...x.mainSocialAndContactSection, [sectionPropertyName]: (event.target as HTMLInputElement).value }
@@ -101,7 +101,7 @@ export class MainSocialAndContactEditComponent {
       return x;
     });
 
-    const pages = data.pages.map(page => {
+    const pages = schema.pages.map(page => {
       page.sections = page.sections?.map(x => {
         if (x[sectionName]!= null && x[sectionName]?.sectionId === sectionId) {
           if (x.mainSocialAndContactSection != null) {
@@ -129,12 +129,12 @@ export class MainSocialAndContactEditComponent {
       return page;
     });
 
-    const newValue: Data = {
-      ...data,
-      pageHome: { ...data.pageHome, sections: pageHomeSections },
+    const newValue: Schema = {
+      ...schema,
+      pageHome: { ...schema.pageHome, sections: pageHomeSections },
       pages: pages,
     };
 
-    this.globalService.data.next(newValue);
+    this.globalService.schema.next(newValue);
   }
 }

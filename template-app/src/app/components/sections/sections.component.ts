@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Section } from '../../../data';
+import { Section } from '../../../schema';
 import { NgFor, NgIf } from '@angular/common';
 import { ContactSectionComponent } from "./contact-section/contact-section.component";
 import { GridSectionComponent } from "./grid-section/grid-section.component";
@@ -33,7 +33,7 @@ import { GlobalService } from '../../services/global.service';
 export class SectionsComponent {
   sections = input<Section[]>();
 
-  constructor(public globalService: GlobalService) {}
+  constructor(private readonly globalService: GlobalService) {}
 
   editing: boolean = this.globalService.editing.value;
 

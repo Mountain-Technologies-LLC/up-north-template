@@ -1,45 +1,61 @@
-<div class="flex absolute inset-x-0 top-0 z-50">
-  <div *ngIf="editing" class="flex-none self-center">
-    <div class="dropdown dropdown-right select-none">
-      <div appFocusRemover tabindex="0" role="button" class="btn m-1">
+<div class="flex flex-col sticky inset-x-0 top-0 z-50">
+  <div class="flex bg-base-100/90 backdrop-blur shadow-[0_0_0_1px_rgb(255,255,255,0.1),0_0_0_2px_rgb(0,0,0,0.05)]">
+    <div *ngIf="editing" class="flex-none self-center">
+      <div tabindex="0" role="button" class="btn m-1" (click)="toggleEditMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-default shrink-0">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
         </svg>
       </div>
-      <div
-        tabindex="0"
-        class="dropdown-content bg-base-200 text-base-content rounded-box z-[1] w-max p-4 shadow grid grid-cols-1 gap-3">
-        <div class="navbar bg-primary text-primary-content rounded-box">
-          <div class="navbar-start">
-            <div class="text-xl text-nowrap px-4">Up North Template</div>
-          </div>
-          <div class="navbar-end">
-            <a
-              (click)="exportJson()"
-              class="btn btn-secondary">Export JSON</a>
-          </div>
+    </div>
+    <div class="flex-1">
+      <header>
+        <app-navbar
+          [companyName]="schema()?.companyName"
+          [pages]="schema()?.pages">
+        </app-navbar>
+      </header>
+    </div>
+  </div>
+
+  <div
+    [ngClass]="{ 'collapse-open': showEditMenu }"
+    class="collapse bg-neutral rounded-none collapse-open">
+
+    <div class="collapse-title !hidden"></div>
+    <div class="collapse-content container mx-auto px-1 sm:px-4 md:px-6 lg:px-8">
+      <div class="mt-5 navbar rounded-box bg-neutral-content">
+        <div class="navbar-start">
+          <div class="text-xl text-nowrap px-4 text-neutral">Up North Template</div>
         </div>
-        <label class="form-control w-full">
-          <div class="label font-medium leading-6">
-            <span class="label-text">Website Name</span>
-          </div>
+        <div class="navbar-end">
+          <a
+            (click)="exportJson()"
+            class="btn btn-secondary">Export JSON</a>
+        </div>
+      </div>
+      <label class="form-control w-full mt-5">
+        <div class="label font-medium leading-6">
+          <span class="label-text text-neutral-content">Website Name</span>
+        </div>
 
-          <input
-            [value]="data()?.companyName"
-            (change)="changedCompanyName($event)"
-            type="text"
-            class="input input-bordered w-full" />
-        </label>
-        <label class="form-control w-full pointer-events-none">
-          <div class="label font-medium leading-6">
-            <span class="label-text">Website Theme</span>
-          </div>
+        <input
+          [value]="schema()?.companyName"
+          (change)="changedCompanyName($event)"
+          type="text"
+          class="input input-bordered w-full" />
+      </label>
+      <label class="form-control w-full mt-5">
+        <div class="label font-medium leading-6">
+          <span class="label-text text-neutral-content">Website Theme</span>
+        </div>
 
-          <div class="grid grid-cols-1 gap-3 p-y-3 h-[28.6rem] max-h-[calc(100vh-20rem)] min-h-[6rem] overflow-y-auto">
+        <!-- grid grid-cols-1 gap-3  -->
+        <div class="p-y-3 h-[29rem] max-h-[calc(100vh-20rem)] min-h-[6rem] overflow-y-auto pointer-events-auto">
+          <div class="bg-neutral text-neutral-content grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-4 pointer-events-none">
             <button
               *ngFor="let theme of themes"
               (click)="changedTheme(theme)"
-              class="outline-base-content text-start outline-offset-4 pointer-events-auto">
+              class="outline-base-content text-start block pointer-events-auto">
               <span
                 [attr.data-theme]="theme"
                 class="bg-base-100 rounded-btn text-base-content block w-full cursor-pointer font-sans">
@@ -52,7 +68,7 @@
                       viewBox="0 0 24 24"
                       fill="currentColor"
                       class="invisible h-3 w-3 shrink-0"
-                      [class.invisible] = "theme !== data()?.theme">
+                      [class.invisible] = "theme !== schema()?.theme">
                       <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z">
                       </path>
                     </svg>
@@ -70,16 +86,9 @@
               </span>
             </button>
           </div>
-        </label>
-      </div>
+        </div>
+      </label>
     </div>
-  </div>
-  <div class="flex-1">
-    <header>
-      <app-navbar
-        [companyName]="data()?.companyName"
-        [pages]="data()?.pages">
-      </app-navbar>
-    </header>
+
   </div>
 </div>
