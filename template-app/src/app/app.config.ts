@@ -74,11 +74,11 @@ export function getBaseHref(platformLocation: PlatformLocation): string {
 export function getRoutes(routes: Routes, config: Schema): Routes {
   config.pages.forEach(p => {
     if (p.sections != null) {
-      routes.push({ path: p.link!, component: PageComponent });
+      routes.push({ path: p.link!, component: PageComponent, title: p.name });
     }
 
     if (p.pages != null) {
-      p.pages.forEach(sp => routes.push({ path: sp.link!, component: PageComponent }));
+      p.pages.forEach(sp => routes.push({ path: sp.link!, component: PageComponent, title: sp.name }));
     }
   });
 

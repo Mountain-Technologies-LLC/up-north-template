@@ -7,23 +7,19 @@ import { GlobalService } from "./services/global.service";
 export class TemplatePageTitleStrategy extends TitleStrategy {
   constructor(
     private readonly title: Title,
-    private readonly globalService: GlobalService
-  ) {
-    console.log('title', title);
-    console.log('globalService', globalService);
-
+    private readonly globalService: GlobalService) {
     super();
   }
 
   override updateTitle(routerState: RouterStateSnapshot) {
-    console.log('TODO: this.title', this.title);
     const customTitle = this.buildTitle(routerState) || '';
     const title = this.buildTitle(routerState);
 
     if (title !== undefined) {
       this.title.setTitle(`${customTitle} - ${this.globalService.schema.value.companyName}`);
     }
-
-    console.log('TODO: this.title', this.title);
+    else {
+      this.title.setTitle(`${this.globalService.schema.value.companyName}`);
+    }
   }
 }

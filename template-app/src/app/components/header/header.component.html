@@ -1,5 +1,5 @@
 <div class="flex flex-col sticky inset-x-0 top-0 z-50">
-  <div class="flex bg-base-100/90 backdrop-blur shadow-[0_0_0_1px_rgb(255,255,255,0.1),0_0_0_2px_rgb(0,0,0,0.05)]">
+  <div class="flex bg-base-100/80 backdrop-blur-lg shadow-[0_0_0_1px_rgb(255,255,255,0.1),0_0_0_2px_rgb(0,0,0,0.05)]">
     <div *ngIf="editing" class="flex-none self-center">
       <div tabindex="0" role="button" class="btn m-1" (click)="toggleEditMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-default shrink-0">
@@ -72,7 +72,7 @@
                       <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z">
                       </path>
                     </svg>
-                    <span class="flex-grow text-sm">
+                    <span [attr.data-theme]="theme" class="flex-grow text-sm">
                       {{theme}}
                     </span>
                     <span class="flex h-full shrink-0 flex-wrap gap-1">
