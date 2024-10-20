@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Schema } from '../../schema';
-import { environment } from '../../environment/environment';
 
 // https://blog.briebug.com/blog/how-declare-global-variable-angular
 
@@ -25,20 +24,7 @@ export class GlobalService {
 
   editing = new BehaviorSubject<boolean>(true);
 
-  constructor() {
-    let schemaUrl = environment.schemaUrl && environment.schemaUrl.length > 0
-      ? environment.schemaUrl
-      : environment.demoSchemaUrl;
-
-    const request = new Request(schemaUrl);
-
-    fetch(request)
-      .then(res => {
-        return res.json();
-      })
-      .then(json => {
-        this.schema.next(json);
-      });
+  InitializeSchema(schema: Schema) {
+    this.schema.next(schema);
   }
 }
-// npm run start -- --env.schemaUrl='https://raw.githubusercontent.com/Mountain-Technologies-LLC/up-north-template/refs/heads/main/template-app/src/schema.json'

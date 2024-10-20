@@ -1,36 +1,64 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, Routes, TitleStrategy, withInMemoryScrolling } from '@angular/router';
+import { APP_INITIALIZER, ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { Router, Routes, TitleStrategy, provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { TemplatePageTitleStrategy } from './TemplatePageTitleStrategy';
 import { APP_BASE_HREF, PlatformLocation } from '@angular/common';
-import { Schema } from '../schema';
+import { environment } from '../environment/environment';
 import { PageComponent } from './components/page/page.component';
+import { Schema } from '../schema';
+import { GlobalService } from './services/global.service';
 
-export function getConfig(remoteConfig: Schema): ApplicationConfig {
-  const allRoutes = getRoutes(routes, remoteConfig);
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(
+      routes,
+      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' }),
+    ),
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeApp,
+      multi: true,
+      deps: [Router, GlobalService],
+    },
+    provideClientHydration(),
+    {
+      provide: TitleStrategy,
+      useClass: TemplatePageTitleStrategy
+    },
+    {
+        provide: APP_BASE_HREF,
+        useFactory: getBaseHref,
+        deps: [PlatformLocation]
+    },
+  ]
+};
 
-  const appConfig: ApplicationConfig = {
-    providers: [
-      provideZoneChangeDetection({ eventCoalescing: true }),
-      provideRouter(
-        allRoutes,
-        withInMemoryScrolling({ scrollPositionRestoration: 'enabled' }),
-      ),
-      provideClientHydration(),
-      {
-        provide: TitleStrategy,
-        useClass: TemplatePageTitleStrategy,
-      },
-      {
-          provide: APP_BASE_HREF,
-          useFactory: getBaseHref,
-          deps: [PlatformLocation]
-      },
-    ]
-  };
+export function initializeApp(router: Router, globalService: GlobalService): () => Promise<void> {
+  return () =>
+    new Promise((resolve) =>
+    {
+      const schemaUrl = environment.schemaUrl && environment.schemaUrl.length > 0
+        ? environment.schemaUrl
+        : environment.demoSchemaUrl;
 
-  return appConfig;
+      const request = new Request(schemaUrl);
+
+      setTimeout(async () => {
+        await fetch(request)
+          .then(response => response.json())
+          .then(remoteConfig => {
+            const allRoutes = getRoutes(routes, remoteConfig);
+
+            router.resetConfig(allRoutes);
+            globalService.InitializeSchema(remoteConfig);
+          })
+          .catch(err => console.error('fetch-fail', err));
+
+        resolve();
+      });
+    });
 }
 
 export function getBaseHref(platformLocation: PlatformLocation): string {

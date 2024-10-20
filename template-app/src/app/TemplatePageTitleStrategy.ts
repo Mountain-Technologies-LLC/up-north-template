@@ -16,7 +16,7 @@ export class TemplatePageTitleStrategy extends TitleStrategy {
   }
 
   override updateTitle(routerState: RouterStateSnapshot) {
-    console.log('this.title', this.title);
+    console.log('TODO: this.title', this.title);
     const customTitle = this.buildTitle(routerState) || '';
     const title = this.buildTitle(routerState);
 
@@ -24,6 +24,6 @@ export class TemplatePageTitleStrategy extends TitleStrategy {
       this.title.setTitle(`${customTitle} - ${this.globalService.schema.value.companyName}`);
     }
 
-    console.log('this.title', this.title);
+    console.log('TODO: this.title', this.title);
   }
 }
