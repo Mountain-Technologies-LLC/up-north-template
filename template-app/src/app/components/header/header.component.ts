@@ -32,8 +32,6 @@ export class HeaderComponent {
   }
 
   changedTheme(theme: string) {
-    console.log('changedTheme', theme);
-
     const newValue: Schema = {
       ...this.globalService.schema.value,
       theme: theme,
@@ -42,7 +40,7 @@ export class HeaderComponent {
     this.globalService.schema.next(newValue);
   }
 
-  showEditMenu = true;
+  showEditMenu = false;
   toggleEditMenu() {
     this.showEditMenu = !this.showEditMenu;
   }
