@@ -7,11 +7,21 @@
       </a>
     </div>
   </div>
+
   <div class="text-center">
-    <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
+    <h1
+      (blur)="onTextChange($event)"
+      [attr.contenteditable]="editing"
+      [attr.spellcheck]="editing"
+      class="text-4xl font-bold tracking-tight sm:text-6xl outline-none">
       {{mainSocialAndContactSection()?.text}}
     </h1>
-    <p class="text-base-content/70 mt-6 text-lg leading-8">
+
+    <p
+      (blur)="onSubTextChange($event)"
+      [attr.contenteditable]="editing"
+      [attr.spellcheck]="editing"
+      class="text-base-content/70 mt-6 text-lg leading-8 outline-none">
       {{mainSocialAndContactSection()?.subText}}
     </p>
     <div class="mt-10 flex items-center justify-center gap-x-6">

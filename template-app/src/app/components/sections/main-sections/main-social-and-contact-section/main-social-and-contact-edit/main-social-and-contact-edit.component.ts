@@ -2,6 +2,7 @@ import { Component, input } from '@angular/core';
 import { MainSocialAndContactSection, Schema, Section } from '../../../../../../schema';
 import { GlobalService } from '../../../../../services/global.service';
 import { FocusRemoverDirective } from '../../../../../shared/focus-remover.directive';
+import { EditService } from '../../../../../services/edit.service';
 
 @Component({
   selector: 'app-main-social-and-contact-edit',
@@ -12,7 +13,10 @@ import { FocusRemoverDirective } from '../../../../../shared/focus-remover.direc
 export class MainSocialAndContactEditComponent {
   mainSocialAndContactSection = input<MainSocialAndContactSection>();
 
-  constructor(private readonly globalService: GlobalService) { }
+  constructor(
+    private readonly editService: EditService,
+    private readonly globalService: GlobalService
+  ) { }
 
   insertAfter() {
     this.insert(true);
@@ -23,19 +27,11 @@ export class MainSocialAndContactEditComponent {
   }
 
   changedSocialLink(event: Event) {
-    this.changed(event, "mainSocialAndContactSection", "socialLink", this.mainSocialAndContactSection()?.sectionId!);
+    this.editService.change(event, "mainSocialAndContactSection", "socialLink", this.mainSocialAndContactSection()?.sectionId!);
   }
 
   changedSocialName(event: Event) {
-    this.changed(event, "mainSocialAndContactSection", "socialName", this.mainSocialAndContactSection()?.sectionId!);
-  }
-
-  changedSubText(event: Event) {
-    this.changed(event, "mainSocialAndContactSection", "subText", this.mainSocialAndContactSection()?.sectionId!);
-  }
-
-  changedText(event: Event) {
-    this.changed(event, "mainSocialAndContactSection", "text", this.mainSocialAndContactSection()?.sectionId!);
+    this.editService.change(event, "mainSocialAndContactSection", "socialName", this.mainSocialAndContactSection()?.sectionId!);
   }
 
   delete() {
@@ -78,56 +74,6 @@ export class MainSocialAndContactEditComponent {
     pageHomeSections.splice(insertPos, 0, newSection);
 
     const pages = schema.pages;
-
-    const newValue: Schema = {
-      ...schema,
-      pageHome: { ...schema.pageHome, sections: pageHomeSections },
-      pages: pages,
-    };
-
-    this.globalService.schema.next(newValue);
-  }
-
-  private changed(event: Event, sectionName: keyof Section, sectionPropertyName: string, sectionId: string) {
-    const schema: Schema = this.globalService.schema.value;
-
-    const pageHomeSections = schema.pageHome.sections.map(x => {
-      if (x[sectionName]!= null && x[sectionName]?.sectionId === sectionId) {
-        if (x.mainSocialAndContactSection != null) {
-          x.mainSocialAndContactSection = { ...x.mainSocialAndContactSection, [sectionPropertyName]: (event.target as HTMLInputElement).value }
-        }
-      }
-
-      return x;
-    });
-
-    const pages = schema.pages.map(page => {
-      page.sections = page.sections?.map(x => {
-        if (x[sectionName]!= null && x[sectionName]?.sectionId === sectionId) {
-          if (x.mainSocialAndContactSection != null) {
-            x.mainSocialAndContactSection = { ...x.mainSocialAndContactSection, [sectionPropertyName]: (event.target as HTMLInputElement).value }
-          }
-        }
-
-        return x;
-      });
-
-      page.pages = page.pages?.map(subPage => {
-        subPage.sections = subPage.sections?.map(x => {
-          if (x[sectionName]!= null && x[sectionName]?.sectionId === sectionId) {
-            if (x.mainSocialAndContactSection != null) {
-              x.mainSocialAndContactSection = { ...x.mainSocialAndContactSection, [sectionPropertyName]: (event.target as HTMLInputElement).value }
-            }
-          }
-
-          return x;
-        });
-
-        return subPage;
-      });
-
-      return page;
-    });
 
     const newValue: Schema = {
       ...schema,

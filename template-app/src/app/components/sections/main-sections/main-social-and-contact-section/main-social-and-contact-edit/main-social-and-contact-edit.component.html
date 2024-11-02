@@ -50,28 +50,6 @@
           class="input input-bordered w-full" />
       </label>
 
-      <label class="form-control w-full">
-        <div class="label font-medium leading-6">
-          <span class="label-text">Text</span>
-        </div>
-        <textarea
-          [value]="mainSocialAndContactSection()?.text"
-          (change)="changedText($event)"
-          class="textarea textarea-bordered h-24 w-full" placeholder="Text">
-        </textarea>
-      </label>
-
-      <label class="form-control w-full">
-        <div class="label font-medium leading-6">
-          <span class="label-text">Sub Text</span>
-        </div>
-        <textarea
-          [value]="mainSocialAndContactSection()?.subText"
-          (change)="changedSubText($event)"
-          class="textarea textarea-bordered h-24 w-full" placeholder="Sub Text">
-        </textarea>
-      </label>
-
       <button (click)="delete()" class="btn btn-error btn-sm">Delete</button>
     </div>
   </div>
