@@ -1,0 +1,38 @@
+
+<div class="collapse-title !hidden"></div>
+<div class="collapse-content container mx-auto px-1 sm:px-4 md:px-6 lg:px-8">
+  <div class="flex flex-col gap-y-5 mt-5">
+    <div class="navbar rounded-box">
+      <div class="navbar-start">
+        <div role="tablist" class="tabs tabs-lg tabs-bordered">
+          <input (click)="clickWebsiteTab()"
+            [ngClass]="tabCss(showWebsiteTab)"
+            type="radio" name="editing_tabs" role="tab" aria-label="Website"
+            class="tab text-neutral-content"
+            checked="checked" />
+          <input  (click)="clickPublishTab()"
+            [ngClass]="tabCss(showPublishTab)"
+            type="radio" name="editing_tabs" role="tab" aria-label="Publish"
+            class="tab text-neutral-content" />
+        </div>
+      </div>
+      <div class="navbar-end">
+        <a
+          class="btn btn-ghost text-neutral-content hover:bg-neutral hover:brightness-150"
+          href="https://github.com/Mountain-Technologies-LLC/up-north-template"
+          target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+          </svg>
+
+          <div class="hidden md:block">
+            GitHub
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <app-website-tab *ngIf="showWebsiteTab" [schema]="schema()"></app-website-tab>
+    <app-publish-tab *ngIf="showPublishTab" [schema]="schema()"></app-publish-tab>
+  </div>
+</div>
