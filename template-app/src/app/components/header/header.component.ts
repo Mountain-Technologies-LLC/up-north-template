@@ -17,6 +17,9 @@ export class HeaderComponent {
   schema = input<Schema>();
 
   showEditMenu = false;
+  hideEditMenu() {
+    this.showEditMenu = false;
+  }
   toggleEditMenu() {
     this.showEditMenu = !this.showEditMenu;
   }
