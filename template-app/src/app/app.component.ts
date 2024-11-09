@@ -1,17 +1,16 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Schema } from '../schema';
-import { NavbarComponent } from './components/header/navbar/navbar.component';
-import { APP_BASE_HREF, DOCUMENT, NgIf } from '@angular/common';
+import { APP_BASE_HREF, DOCUMENT } from '@angular/common';
 import { HeaderComponent } from "./components/header/header.component";
 import { GlobalService } from './services/global.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, NgIf, RouterOutlet, RouterLink, RouterLinkActive, HeaderComponent],
+  imports: [RouterOutlet, RouterLink, HeaderComponent],
   templateUrl: './app.component.html',
-  styles: ":host { display: flex; flex-direction: column; }"
+  styles: ":host { display: flex; flex-direction: column; position: relative; }"
 })
 export class AppComponent implements OnInit {
   constructor (
@@ -30,6 +29,12 @@ export class AppComponent implements OnInit {
         }
       }
     });
+
+    this.globalService.editing.subscribe({
+      next: newValue => {
+        this.editing = newValue;
+      }
+    });
   }
 
   schema: Schema = this.globalService.schema.value;
@@ -46,7 +51,6 @@ export class AppComponent implements OnInit {
 
   companyName: string = this.schema.companyName;
   editing: boolean = this.globalService.editing.value;
-  theme: string = this.schema.theme;
 
   // Footer
   backgroundImage: string
@@ -57,8 +61,6 @@ export class AppComponent implements OnInit {
   tagline: string = this.schema.tagline;
 
   private setTheme() {
-    this.theme = this.schema.theme;
-
     const html = this.document.querySelector("html");
 
     if (html != null) {

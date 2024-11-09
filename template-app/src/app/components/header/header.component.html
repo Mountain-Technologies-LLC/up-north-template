@@ -1,29 +1,32 @@
-<div
-  [ngClass]="{ 'h-screen backdrop-blur': showEditMenu }"
-  class="flex flex-col sticky inset-x-0 top-0 z-50">
-  <div class="flex bg-base-100/80 backdrop-blur-lg shadow-md shadow-neutral/5">
-    <div *ngIf="editing" class="flex-none self-center">
-      <div tabindex="0" role="button" class="btn m-1" (click)="toggleEditMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-default shrink-0">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-        </svg>
+<div [ngClass]="showEditMenu ? '' : 'h-0 transition-[height] delay-300 duration-0'"
+  class="h-screen">
+  <div
+    [ngClass]="{ 'backdrop-blur': showEditMenu }"
+    class="h-full flex flex-col sticky inset-x-0 top-0 transition duration-300">
+    <div class="flex bg-base-100/80 backdrop-blur-lg shadow-md shadow-neutral/5">
+      <div *ngIf="editing()" class="flex-none self-center">
+        <div tabindex="0" role="button" class="btn m-1" (click)="toggleEditMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-default shrink-0">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+          </svg>
+        </div>
+      </div>
+      <div class="flex-1">
+        <header>
+          <app-navbar
+            [companyName]="schema()?.companyName"
+            [pages]="schema()?.pages">
+          </app-navbar>
+        </header>
       </div>
     </div>
-    <div class="flex-1">
-      <header>
-        <app-navbar
-          [companyName]="schema()?.companyName"
-          [pages]="schema()?.pages">
-        </app-navbar>
-      </header>
-    </div>
+
+    <app-edit-menu
+      [ngClass]="{ 'collapse-open shadow-md shadow-accent border-t-2 border-accent': showEditMenu }"
+      [schema]="schema()"
+      class="collapse bg-neutral rounded-none duration-300">
+    </app-edit-menu>
+
+    <div (click)="hideEditMenu()" class="flex-auto"></div>
   </div>
-
-  <app-edit-menu
-    [ngClass]="{ 'collapse-open shadow-md shadow-accent border-t-2 border-accent': showEditMenu }"
-    [schema]="schema()"
-    class="collapse bg-neutral rounded-none duration-300">
-  </app-edit-menu>
-
-  <div (click)="hideEditMenu()" class="flex-auto"></div>
 </div>

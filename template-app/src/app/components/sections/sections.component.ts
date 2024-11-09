@@ -33,7 +33,13 @@ import { GlobalService } from '../../services/global.service';
 export class SectionsComponent {
   sections = input<Section[]>();
 
-  constructor(private readonly globalService: GlobalService) {}
+  constructor(private readonly globalService: GlobalService) {
+    this.globalService.editing.subscribe({
+      next: newValue => {
+        this.editing = newValue;
+      }
+    });
+  }
 
   editing: boolean = this.globalService.editing.value;
 

@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
 import { Schema } from '../../../../../../schema';
+import { GlobalService } from '../../../../../services/global.service';
 
 @Component({
   selector: 'app-publish-tab',
@@ -9,6 +10,12 @@ import { Schema } from '../../../../../../schema';
 })
 export class PublishTabComponent {
   schema = input<Schema>();
+
+  constructor (private readonly globalService: GlobalService) { }
+
+  switchEditing() {
+    this.globalService.editing.next(false);
+  }
 
   exportJson() {
     let schema = JSON.stringify(this.schema());
