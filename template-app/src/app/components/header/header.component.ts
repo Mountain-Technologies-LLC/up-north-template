@@ -19,7 +19,19 @@ export class HeaderComponent {
   hideEditMenu() {
     this.showEditMenu = false;
   }
+
   toggleEditMenu() {
-    this.showEditMenu = !this.showEditMenu;
+    const element = document.getElementById('headerWrapper');
+    const showEditMenu = !this.showEditMenu;
+
+    if (element) {
+      let delay = showEditMenu ? 0 : 300;
+
+      setTimeout(() => {
+        element.classList.toggle('h-screen');
+      }, delay);
+    }
+
+    this.showEditMenu = showEditMenu;
   }
 }
