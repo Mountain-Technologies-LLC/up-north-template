@@ -24,13 +24,9 @@ export class HeaderComponent {
     const element = document.getElementById('headerWrapper');
     const showEditMenu = !this.showEditMenu;
 
-    if (element) {
-      let delay = showEditMenu ? 0 : 300;
-
-      setTimeout(() => {
-        element.classList.toggle('h-screen');
-      }, delay);
-    }
+    setTimeout(() => {
+      element?.classList.toggle('h-screen');
+    }, showEditMenu ? 0 : 300);
 
     this.showEditMenu = showEditMenu;
   }

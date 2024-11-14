@@ -10,6 +10,10 @@
             type="radio" name="editing_tabs" role="tab" aria-label="Website"
             class="tab text-neutral-content"
             checked="checked" />
+          <input (click)="clickPagesTab()"
+            [ngClass]="tabCss(showPagesTab)"
+            type="radio" name="editing_tabs" role="tab" aria-label="Pages"
+            class="tab text-neutral-content" />
           <input (click)="clickPublishTab()"
             [ngClass]="tabCss(showPublishTab)"
             type="radio" name="editing_tabs" role="tab" aria-label="Publish"
@@ -33,6 +37,7 @@
     </div>
 
     <app-website-tab *ngIf="showWebsiteTab" [schema]="schema()"></app-website-tab>
+    <app-pages-tab *ngIf="showPagesTab" [schema]="schema()"></app-pages-tab>
     <app-publish-tab *ngIf="showPublishTab" [schema]="schema()"></app-publish-tab>
   </div>
 </div>
