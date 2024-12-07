@@ -5,7 +5,6 @@ import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-website-tab',
-  standalone: true,
   imports: [NgFor],
   templateUrl: './website-tab.component.html',
 })

@@ -2,7 +2,6 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appFocusRemover]',
-  standalone: true
 })
 export class FocusRemoverDirective {
 

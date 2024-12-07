@@ -3,8 +3,6 @@ import { ContactSection } from '../../../../schema';
 
 @Component({
   selector: 'app-contact-section',
-  standalone: true,
-  imports: [],
   templateUrl: './contact-section.component.html',
 })
 export class ContactSectionComponent {

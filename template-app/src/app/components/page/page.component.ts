@@ -7,7 +7,6 @@ import { GlobalService } from '../../services/global.service';
 
 @Component({
     selector: 'app-page',
-    standalone: true,
     templateUrl: './page.component.html',
     imports: [SectionsComponent]
 })

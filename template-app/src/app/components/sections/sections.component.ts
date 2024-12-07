@@ -14,7 +14,6 @@ import { GlobalService } from '../../services/global.service';
 
 @Component({
     selector: 'app-sections',
-    standalone: true,
     templateUrl: './sections.component.html',
     imports: [
       ContactSectionComponent,

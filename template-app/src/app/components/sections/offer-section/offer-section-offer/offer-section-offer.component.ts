@@ -5,7 +5,6 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-offer-section-offer',
-  standalone: true,
   imports: [NgClass, NgFor, NgIf, RouterLink],
   templateUrl: './offer-section-offer.component.html',
 })

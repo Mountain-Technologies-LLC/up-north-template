@@ -7,7 +7,6 @@ import { PagesTabComponent } from './tabs/pages-tab/pages-tab.component';
 
 @Component({
   selector: 'app-edit-menu',
-  standalone: true,
   imports: [NgClass, NgIf, PagesTabComponent, PublishTabComponent, WebsiteTabComponent],
   templateUrl: './edit-menu.component.html',
 })

@@ -1,11 +1,10 @@
 import { Component, Inject, Input } from '@angular/core';
 import { ImageSection } from '../../../../schema';
-import { APP_BASE_HREF, NgClass, NgFor, NgIf } from '@angular/common';
+import { APP_BASE_HREF, NgClass,  NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-image-section',
-  standalone: true,
-  imports: [NgClass, NgFor, NgIf],
+  imports: [NgClass, NgIf],
   templateUrl: './image-section.component.html',
 })
 export class ImageSectionComponent {

@@ -6,7 +6,6 @@ import { EditService } from '../../../../../services/edit.service';
 
 @Component({
   selector: 'app-main-social-and-contact-edit',
-  standalone: true,
   imports: [FocusRemoverDirective],
   templateUrl: './main-social-and-contact-edit.component.html',
 })

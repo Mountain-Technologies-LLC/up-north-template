@@ -4,8 +4,6 @@ import { GlobalService } from '../../../../../services/global.service';
 
 @Component({
   selector: 'app-publish-tab',
-  standalone: true,
-  imports: [],
   templateUrl: './publish-tab.component.html',
 })
 export class PublishTabComponent {

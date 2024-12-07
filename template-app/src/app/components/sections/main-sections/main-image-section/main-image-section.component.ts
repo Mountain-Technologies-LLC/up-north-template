@@ -4,8 +4,6 @@ import { APP_BASE_HREF } from '@angular/common';
 
 @Component({
   selector: 'app-main-image-section',
-  standalone: true,
-  imports: [],
   templateUrl: './main-image-section.component.html',
 })
 export class MainImageSectionComponent {

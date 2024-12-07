@@ -1,7 +1,6 @@
 import { Component, input } from '@angular/core';
 import { MainSocialAndContactSection } from '../../../../../schema';
 import { RouterLink } from '@angular/router';
-import { NgIf } from '@angular/common';
 import { GlobalService } from '../../../../services/global.service';
 import { EditService } from '../../../../services/edit.service';
 
@@ -10,8 +9,7 @@ import { EditService } from '../../../../services/edit.service';
 
 @Component({
   selector: 'app-main-social-and-contact-section',
-  standalone: true,
-  imports: [NgIf, RouterLink],
+  imports: [RouterLink],
   templateUrl: './main-social-and-contact-section.component.html',
 })
 export class MainSocialAndContactSectionComponent {

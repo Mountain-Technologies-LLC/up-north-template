@@ -7,7 +7,6 @@ import { EditMenuComponent } from './edit-menu/edit-menu.component';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
   imports: [EditMenuComponent, FormsModule, NgClass, NgIf, NavbarComponent],
   templateUrl: './header.component.html',
 })

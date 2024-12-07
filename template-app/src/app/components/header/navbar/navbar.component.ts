@@ -6,7 +6,6 @@ import { FocusRemoverDirective } from '../../../shared/focus-remover.directive';
 
 @Component({
   selector: 'app-navbar',
-  standalone: true,
   imports: [FocusRemoverDirective, NgFor, NgIf, RouterLink],
   templateUrl: './navbar.component.html',
 })
