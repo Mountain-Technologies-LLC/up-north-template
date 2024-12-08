@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "Node package for the repository as a whole",
   "scripts": {
-    "start": "npm run start --if-present --prefix ./template-app",
-    "build": "npm run build --if-present --prefix ./template-app -- --output-path ../dist",
+    "start": "npm run start --if-present --prefix ./angular",
+    "build": "npm run build --if-present --prefix ./angular -- --output-path ../dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "synth": "cdk synth --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\"",
     "diff": "cdk diff --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\"",
