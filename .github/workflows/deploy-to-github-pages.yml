@@ -27,14 +27,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: "./template-app/package-lock.json"
-    - run: npm ci --prefix ./template-app
-    - run: npm run build --if-present --prefix ./template-app -- --base-href /${{ github.event.repository.name }} --deploy-url /${{ github.event.repository.name }}/
+        cache-dependency-path: "./angular/package-lock.json"
+    - run: npm ci --prefix ./angular
+    - run: npm run build --if-present --prefix ./angular -- --base-href /${{ github.event.repository.name }} --deploy-url /${{ github.event.repository.name }}/
 #    - run: npm test
     - uses: actions/upload-artifact@v4
       with:
         name: pages
-        path: template-app/dist/template-app/browser
+        path: angular/dist/angular/browser
         if-no-files-found: error
 
 #  # Deploy job
