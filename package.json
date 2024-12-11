@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "synth": "cdk synth --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\"",
     "diff": "cdk diff --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\"",
-    "deploy": "cdk deploy --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\"",
+    "deploy": "npm run build; cdk deploy --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\"",
     "destroy": "cdk destroy --app \"dotnet run --project infrastructure/src/Infrastructure/Infrastructure.csproj\""
   },
   "repository": {
