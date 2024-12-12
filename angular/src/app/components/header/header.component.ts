@@ -16,7 +16,7 @@ export class HeaderComponent {
 
   showEditMenu = false;
   hideEditMenu() {
-    this.showEditMenu = false;
+    this.toggleEditMenu();
   }
 
   toggleEditMenu() {
