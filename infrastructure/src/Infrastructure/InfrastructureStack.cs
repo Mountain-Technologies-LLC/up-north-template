@@ -1,17 +1,38 @@
 using Amazon.CDK;
 using Constructs;
+using Infrastructure.Constructs;
 
 namespace Infrastructure
 {
+    internal class InfrastructureStackProps : StackProps
+    {
+        public string Name;
+        public string DomainName;
+    }
+
     public class InfrastructureStack : Stack
     {
-        internal InfrastructureStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
+        internal InfrastructureStack(Construct scope, string id, InfrastructureStackProps props = null) : base(scope, id, props)
         {
-            var name = (string)Node.TryGetContext("name");
-
-            new InfrastructureConstruct(this, "InfrastructureConstruct", new InfrastructureConstructProps
+            var bucketConstruct = new BucketConstruct(this, "BucketConstruct", new BucketConstructProps
             {
-                Name = name
+                Name = props.Name,
+                DomainName = props.DomainName
+            });
+
+            _ = new DistributionConstruct(this, "DistributionConstruct", new DistributionConstructProps
+            {
+                DomainName = props.DomainName
+            });
+
+            _ = new BucketDeploymentConstruct(this, "BucketDeploymentConstruct", new BucketDeploymentConstructProps
+            {
+                Bucket = bucketConstruct.Bucket
+            });
+
+            _ = new AmplifyConstruct(this, "AmplifyConstruct", new AmplifyConstructProps
+            {
+                Name = props.Name
             });
         }
     }
