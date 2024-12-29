@@ -36,6 +36,12 @@ export const appConfig: ApplicationConfig = {
 };
 
 export function initializeApp(router: Router, globalService: GlobalService): () => Promise<void> {
+  if (true || "TODO: Use environment varialbes") {
+    const data = require("../schema/demo.json");
+    initializeAppData(data, routes, router, globalService);
+    return () => Promise.resolve();
+  }
+
   return () =>
     new Promise((resolve) =>
     {
@@ -49,10 +55,7 @@ export function initializeApp(router: Router, globalService: GlobalService): () 
         await fetch(request)
           .then(response => response.json())
           .then(remoteConfig => {
-            const allRoutes = getRoutes(routes, remoteConfig);
-
-            router.resetConfig(allRoutes);
-            globalService.InitializeSchema(remoteConfig);
+            initializeAppData(remoteConfig, routes, router, globalService);
           })
           .catch(err => console.error('fetch-fail', err));
 
@@ -83,4 +86,11 @@ export function getRoutes(routes: Routes, config: Schema): Routes {
   });
 
   return routes;
+}
+
+function initializeAppData(data: Schema, routes: Routes, router: Router, globalService: GlobalService) {
+  const allRoutes = getRoutes(routes, data);
+
+  router.resetConfig(allRoutes);
+  globalService.InitializeSchema(data);
 }
