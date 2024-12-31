@@ -2,6 +2,7 @@ export type Schema = {
   companyName: string;
   email: string;
   footerImageFileName?: string | null;
+  logoFileName?: string | null;
   pageHome: PageHome;
   pages: Page[];
   phoneNumber: string;

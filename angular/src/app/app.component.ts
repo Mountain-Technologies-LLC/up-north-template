@@ -50,6 +50,7 @@ export class AppComponent implements OnInit {
   }
 
   companyName: string = this.schema.companyName;
+  logoFileName: string = this.schema.logoFileName ?? "/images/logo.png";
   editing: boolean = this.globalService.editing.value;
 
   // Footer
