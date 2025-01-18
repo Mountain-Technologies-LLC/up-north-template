@@ -51,12 +51,15 @@ export type ContactSection = {
 
 export type GridSection = {
   sectionId: string;
+  subText: string | null;
+  text: string | null;
   gridColsSection: GridColSection[];
 }
 
 export type GridColSection = {
-  subText: string;
-  text: string;
+  subText: string | null;
+  text: string | null;
+  list: string[] | null
 }
 
 export type ImageSection = {
