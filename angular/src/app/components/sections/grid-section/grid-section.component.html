@@ -1,6 +1,6 @@
 <div class="px-1 py-7 sm:py-10 prose prose-sm md:prose-base lg:prose-lg max-w-none">
-  <h3>{{gridSection.text}}</h3>
-  <div class="mx-auto grid grid-cols-1 gap-x-8 gap-y-{{gridGapY}} sm:grid-cols-{{gridColsSmCount}} lg:grid-cols-{{gridColsLgCount}}">
+  <h3 *ngIf="gridSection.text">{{gridSection.text}}</h3>
+  <div [class]="gridClasses" class="grid grid-cols-1 gap-x-8 mx-auto">
     <div *ngFor="let col of gridSection.gridColsSection" class="flex max-w-xl flex-col items-start justify-between">
       <div class="group relative">
         <h4 *ngIf="col.text != null" class="font-semibold !mt-0">
@@ -10,7 +10,7 @@
         <p *ngIf="col.subText != null" class="text-base-content/70 mt-5 line-clamp-3 text-sm leading-6">
           {{col.subText}}
         </p>
-        <ul *ngIf="col.list != null" class="text-sm  {{removeListMargin ? 'my-0' : ''}}">
+        <ul *ngIf="col.list != null" class="text-sm  {{removeListMargin ? '!my-0' : ''}}">
           <li *ngFor="let item of col.list">{{item}}</li>
         </ul>
       </div>

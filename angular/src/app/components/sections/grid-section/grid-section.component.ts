@@ -14,16 +14,14 @@ export class GridSectionComponent implements OnInit {
   ngOnInit() {
     const hasText = this.gridSection.gridColsSection.some(x => x.text != null || x.subText != null);
 
-    this.gridColsSmCount = Math.min(this.gridSection.gridColsSection.length, 2);
-    this.gridColsLgCount = Math.min(this.gridSection.gridColsSection.length, 3);
-    this.gridGapY = hasText ? 10 : 0;
+    this.gridClasses.push("sm:grid-cols-" + Math.min(this.gridSection.gridColsSection.length, 2));
+    this.gridClasses.push("lg:grid-cols-" + Math.min(this.gridSection.gridColsSection.length, 3));
+    this.gridClasses.push("gap-y-" + (hasText ? 10 : 0));
 
     this.removeListMargin = !hasText;
   }
 
-  gridColsSmCount!: number;
-  gridColsLgCount!: number;
-  gridGapY!: number;
+  gridClasses: string[] = [];
 
   removeListMargin!: boolean
 }
