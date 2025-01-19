@@ -14,8 +14,9 @@ export class GridSectionComponent implements OnInit {
   ngOnInit() {
     const hasText = this.gridSection.gridColsSection.some(x => x.text != null || x.subText != null);
 
-    this.gridClasses.push("sm:grid-cols-" + Math.min(this.gridSection.gridColsSection.length, 2));
-    this.gridClasses.push("lg:grid-cols-" + Math.min(this.gridSection.gridColsSection.length, 3));
+    let length = this.gridSection.gridColsSection.length;
+    this.gridClasses.push("sm:grid-cols-" + Math.min(length, 2));
+    this.gridClasses.push("md:grid-cols-" + Math.min(length, 3));
     this.gridClasses.push("gap-y-" + (hasText ? 10 : 0));
 
     this.removeListMargin = !hasText;

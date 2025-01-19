@@ -64,7 +64,8 @@ export type GridColSection = {
 
 export type ImageSection = {
   sectionId: string;
-  imageFileName: string;
+  imageFileName: string | null;
+  imageFileNames: string[] | null;
   imageFirst?: boolean | null;
   subText?: string | null;
   text?: string | null;

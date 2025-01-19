@@ -6,7 +6,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
-      <ul tabindex="0" class="dropdown-content z-[1] menu menu-sm p-2 mt-3 shadow bg-base-100 rounded-box w-52">
+      <ul tabindex="0" class="dropdown-content z-[1] menu menu-sm p-2 mt-3 shadow bg-base-100 rounded-box min-w-52">
         <li *ngFor="let page of pages()">
           <a appFocusRemover *ngIf="page.sections != null" routerLink="/{{page.link}}">
             {{ page.name }}
