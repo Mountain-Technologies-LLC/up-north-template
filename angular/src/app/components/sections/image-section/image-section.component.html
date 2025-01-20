@@ -14,7 +14,7 @@
      class="flex flex-col sm:flex-row sm:items-center gap-x-8 gap-y-8 px-4 sm:mx-auto py-8 sm:px-6 md:max-w-7xl md:px-8"
      [ngClass]="{ 'sm:flex-row-reverse': imageSection.imageFirst == false }">
   <div class="flex-1"
-       [ngClass]="{ 'text-end': imageSection.imageFirst != false }">
+       [ngClass]="{ 'text-center sm:text-end': imageSection.imageFirst != false }">
     <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
       {{imageSection.text}}
     </h2>
@@ -31,13 +31,13 @@
   </div>
 </div>
 
-<div *ngIf="imageSection.imageFileNames != null" class="grid gap-4" [class]="imageListClasses">
+<div *ngIf="imageSection.imageFileNames != null" class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
   <a *ngFor="let imageFileName of imageSection.imageFileNames"
      href="{{baseHref + imageFileName}}"
      target="_blank"
      rel="noopener noreferrer">
     <img [src]="baseHref + imageFileName"
       alt=""
-      class="shadow-xl rounded-lg mx-auto object-cover w-full aspect-square" />
+      class="shadow-xl rounded-lg object-cover aspect-square mx-auto w-full" />
   </a>
 </div>
