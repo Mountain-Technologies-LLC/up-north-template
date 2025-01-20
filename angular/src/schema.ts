@@ -65,10 +65,15 @@ export type GridColSection = {
 export type ImageSection = {
   sectionId: string;
   imageFileName: string | null;
-  imageFileNames: string[] | null;
+  images: Image[] | null;
   imageFirst?: boolean | null;
   subText?: string | null;
   text?: string | null;
+}
+
+export type Image = {
+  linkSm: string | null;
+  link: string;
 }
 
 export type MainCenteredSection = {

@@ -31,12 +31,12 @@
   </div>
 </div>
 
-<div *ngIf="imageSection.imageFileNames != null" class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
-  <a *ngFor="let imageFileName of imageSection.imageFileNames"
-     href="{{baseHref + imageFileName}}"
+<div *ngIf="imageSection.images != null" class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+  <a *ngFor="let image of imageSection.images"
+     href="{{baseHref + image.link}}"
      target="_blank"
      rel="noopener noreferrer">
-    <img [src]="baseHref + imageFileName"
+    <img [src]="baseHref + (image?.linkSm ?? image.link)"
       alt=""
       class="shadow-xl rounded-lg object-cover aspect-square mx-auto w-full" />
   </a>
