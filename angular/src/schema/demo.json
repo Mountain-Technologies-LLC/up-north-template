@@ -3,11 +3,11 @@
   "email": "email@company.com",
   "footerImageFileName": "footer-bg.jpg",
   "pageHome": {
-    "pageId": "0-0-0-0-0",
+    "pageId": "a1675d52-b34a-4bb0-a6b8-388cebe1cd87",
     "sections": [
       {
         "mainSocialAndContactSection": {
-          "sectionId": "0-0-0-0-1",
+          "sectionId": "b1607ce9-1b53-4418-bfbf-5b6a200706b7",
           "socialLink": "https://www.facebook.com/mountaintechnologiesllc",
           "socialName": "Facebook",
           "socialUsername": "@facebook",
@@ -17,7 +17,7 @@
       },
       {
         "imageSection": {
-          "sectionId": "0-0-0-0-2",
+          "sectionId": "16cd3ea8-c86e-4523-b928-a72687c4289f",
           "imageFileName": "/images/logo.png",
           "imageFirst": true,
           "subText": "Porttitor leo a diam sollicitudin tempor id eu nisl. Cursus in hac habitasse platea dictumst quisque sagittis purus. Mi tempus imperdiet nulla malesuada pellentesque elit. Nullam eget felis eget nunc lobortis mattis aliquam faucibus purus. Eget magna fermentum iaculis eu non. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Molestie a iaculis at erat pellentesque. Tincidunt dui ut ornare lectus sit amet est. Elit pellentesque habitant morbi tristique senectus et netus et.",
@@ -26,7 +26,7 @@
       },
       {
         "imageSection": {
-          "sectionId": "0-0-0-0-3",
+          "sectionId": "d803e178-a75f-4e8b-b0cc-e1ecc77c9011",
           "imageFileName": "/images/logo.png",
           "imageFirst": false,
           "subText": "Eu sem integer vitae justo eget magna.",
@@ -35,7 +35,7 @@
       },
       {
         "imageSection": {
-          "sectionId": "0-0-0-0-4",
+          "sectionId": "552a2f60-d393-49d8-90fd-13fd1a705040",
           "imageFileName": "/images/logo.png",
           "imageFirst": true,
           "subText": "At ultrices mi tempus imperdiet.",
@@ -44,7 +44,7 @@
       },
       {
         "gridSection": {
-          "sectionId": "0-0-0-0-5",
+          "sectionId": "bb32d465-ba44-49eb-8486-a0977de59187",
           "gridColsSection": [
             {
               "subText": "Netus et malesuada fames ac turpis egestas maecenas pharetra convallis.",
@@ -65,20 +65,20 @@
   },
   "pages": [
     {
-      "pageId": "0-0-0-0-1",
+      "pageId": "5f6acce9-3a7a-4449-93fd-244bab90e02a",
       "link": "page-offer",
       "name": "Page Offer",
       "sections": [
         {
           "mainCenteredSection": {
-            "sectionId": "0-0-0-0-6",
+            "sectionId": "9d6ea466-3747-4da1-9bb4-65e3072a45a2",
             "subText": "Tincidunt augue interdum velit euismod. Fames ac turpis egestas sed tempus urna et. Cras fermentum odio eu feugiat pretium nibh ipsum. Ut venenatis tellus in metus vulputate eu scelerisque felis. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Vitae aliquet nec ullamcorper sit amet risus.",
             "text": "Best Deals in Town"
           }
         },
         {
           "offerSection": {
-            "sectionId": "0-0-0-0-7",
+            "sectionId": "c8b69067-6f2c-4d17-b7b4-303ada6bcc97",
             "offers": [
               {
                 "buttonText": "Start here",
@@ -140,7 +140,7 @@
           "sections": [
             {
               "mainCenteredSection": {
-                "sectionId": "0-0-0-0-8",
+                "sectionId": "76f9a9b6-ddbd-407f-8587-d4405d9ad958",
                 "subText": "Tincidunt augue interdum velit euismod in. Turpis massa sed elementum tempus egestas.",
                 "text": "Page A"
               }
@@ -154,7 +154,7 @@
           "sections": [
             {
               "mainCenteredSection": {
-                "sectionId": "0-0-0-0-9",
+                "sectionId": "8b782f16-2b63-4d84-9fdb-dc6efdd06db9",
                 "subText": "Maecenas ultricies mi eget mauris pharetra et ultrices neque ornare. Pretium viverra suspendisse potenti nullam ac tortor vitae purus. Egestas egestas fringilla phasellus faucibus scelerisque eleifend.",
                 "text": "Page B"
               }
@@ -164,19 +164,19 @@
       ]
     },
     {
-      "pageId": "0-0-0-0-2",
+      "pageId": "780aa6a0-4e7a-4b78-ab34-e532cd6e99c6",
       "name": "Contact",
       "link": "contact",
       "sections": [
         {
           "mainImageSection": {
-            "sectionId": "0-0-0-0-10",
+            "sectionId": "a8c93655-e5b8-4205-86d0-aae7a56ba3b40",
             "imageFileName": "walter-1.jpg"
           }
         },
         {
           "contactSection": {
-            "sectionId": "0-0-0-0-11",
+            "sectionId": "65a08c87-f944-4950-8c71-7fc0c65b243f1",
             "email": "email@company.com",
             "phoneNumber": "(###) ###-####",
             "phoneTel": "+10000000000",
