@@ -26,10 +26,10 @@ export class WebsiteTabComponent {
     this.globalService.schema.next(newValue);
   }
 
-  changedTheme(theme: string) {
+  changedThemeDefault(theme: string) {
     const newValue: Schema = {
       ...this.globalService.schema.value,
-      theme: theme,
+      themeDefault: theme,
     };
 
     this.globalService.schema.next(newValue);

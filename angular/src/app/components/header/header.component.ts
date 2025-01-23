@@ -1,6 +1,6 @@
-import { Component, ElementRef, HostListener, input, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, Inject, input, Renderer2 } from '@angular/core';
 import { Schema } from '../../../schema';
-import { NgClass, NgIf } from '@angular/common';
+import { DOCUMENT, NgClass, NgIf } from '@angular/common';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { FormsModule } from '@angular/forms';
 import { EditMenuComponent } from './edit-menu/edit-menu.component';
@@ -14,7 +14,10 @@ export class HeaderComponent {
   editing = input<boolean>();
   schema = input<Schema>();
 
-  constructor(private el: ElementRef, private renderer: Renderer2) { }
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document) { }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
@@ -46,5 +49,12 @@ export class HeaderComponent {
     }, showEditMenu ? 0 : 300);
 
     this.showEditMenu = showEditMenu;
+
+    if (this.showEditMenu) {
+      this.document.querySelector('html')?.classList.add('overflow-hidden');
+    }
+    else {
+      this.document.querySelector('html')?.classList.remove('overflow-hidden');
+    }
   }
 }

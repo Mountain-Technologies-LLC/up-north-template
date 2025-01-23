@@ -19,7 +19,9 @@ export class GlobalService {
     socialName: '',
     socialUsername: '',
     tagline: '',
-    theme: ''
+    themeDefault: '',
+    themeDark: null,
+    themeLight: null
   });
 
   editing = new BehaviorSubject<boolean>(true);

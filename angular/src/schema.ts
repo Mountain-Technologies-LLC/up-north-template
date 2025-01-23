@@ -11,7 +11,9 @@ export type Schema = {
   socialName: string;
   socialUsername: string;
   tagline: string;
-  theme: string;
+  themeDark: string | null;
+  themeDefault: string;
+  themeLight: string | null;
 }
 
 export type PageHome = {

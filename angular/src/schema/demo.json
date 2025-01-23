@@ -196,7 +196,8 @@
   "socialName": "Facebook",
   "socialUsername": "@facebook",
   "tagline": "Just make it.",
-  "theme-note": "Remove the -[theme] below to change the theme of the template. And also add -[theme] to the current.",
-  "theme": "light",
+  "themeDark": "dark",
+  "themeDefault": "light",
+  "themeLight": "light",
   "usernameFacebook": "@company"
 }

@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
 
     this.globalService.schema.subscribe({
       next: newValue => {
-        const setTheme = this.schema.theme == newValue.theme ? false : true;
+        const setTheme = this.schema.themeDefault == newValue.themeDefault ? false : true;
 
         this.schema = newValue;
 
@@ -40,6 +40,12 @@ export class AppComponent implements OnInit {
   schema: Schema = this.globalService.schema.value;
 
   ngOnInit(): void {
+    if (typeof window !== "undefined"
+        && window.matchMedia
+        && window.matchMedia('(prefers-color-scheme: dark)').matches
+        && this.schema.themeDark != null) {
+      this.schema.themeDefault = this.schema.themeDark;
+    }
     this.setTheme();
 
     const faviconLink = this.document.querySelector('html head link[type="image/x-icon"]');
@@ -65,7 +71,7 @@ export class AppComponent implements OnInit {
     const html = this.document.querySelector("html");
 
     if (html != null) {
-      html.setAttribute("data-theme", this.schema.theme);
+      html.setAttribute("data-theme", this.schema.themeDefault);
 
       const metaTheme = html.querySelector("head meta[name='theme-color']");
 
