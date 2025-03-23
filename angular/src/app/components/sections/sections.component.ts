@@ -11,11 +11,13 @@ import { OfferSectionComponent } from "./offer-section/offer-section.component";
 import { TextSectionComponent } from "./text-section/text-section.component";
 import { MainSocialAndContactEditComponent } from "./main-sections/main-social-and-contact-section/main-social-and-contact-edit/main-social-and-contact-edit.component";
 import { GlobalService } from '../../services/global.service';
+import { ButtonSectionComponent } from './button-section/button-section.component';
 
 @Component({
     selector: 'app-sections',
     templateUrl: './sections.component.html',
     imports: [
+      ButtonSectionComponent,
       ContactSectionComponent,
       GridSectionComponent,
       ImageSectionComponent,

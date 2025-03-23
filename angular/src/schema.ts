@@ -29,6 +29,7 @@ export type Page = {
 }
 
 export type Section = {
+  buttonSection?: ButtonSection | null;
   contactSection?: ContactSection | null;
   gridSection?: GridSection | null;
   imageSection?: ImageSection | null;
@@ -37,6 +38,12 @@ export type Section = {
   mainSocialAndContactSection?: MainSocialAndContactSection | null;
   offerSection?: OfferSection | null;
   textSection?: TextSection | null;
+}
+
+export type ButtonSection = {
+  sectionId: string;
+  link: string | null
+  text: string;
 }
 
 export type ContactSection = {
