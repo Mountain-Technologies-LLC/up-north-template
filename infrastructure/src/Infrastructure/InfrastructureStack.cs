@@ -20,20 +20,22 @@ namespace Infrastructure
                 DomainName = props.DomainName
             });
 
-            _ = new DistributionConstruct(this, "DistributionConstruct", new DistributionConstructProps
+            var distributionConstruct = new DistributionConstruct(this, "DistributionConstruct", new DistributionConstructProps
             {
+                Bucket = bucketConstruct.Bucket,
                 DomainName = props.DomainName
             });
 
             _ = new BucketDeploymentConstruct(this, "BucketDeploymentConstruct", new BucketDeploymentConstructProps
             {
-                Bucket = bucketConstruct.Bucket
+                Bucket = bucketConstruct.Bucket,
+                distribution = distributionConstruct.distribution
             });
 
-            _ = new AmplifyConstruct(this, "AmplifyConstruct", new AmplifyConstructProps
-            {
-                Name = props.Name
-            });
+            // _ = new AmplifyConstruct(this, "AmplifyConstruct", new AmplifyConstructProps
+            // {
+            //     Name = props.Name
+            // });
         }
     }
 }

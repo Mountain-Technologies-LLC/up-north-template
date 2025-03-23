@@ -23,9 +23,6 @@ namespace Infrastructure
 
             new InfrastructureStack(app, "InfrastructureStack", new InfrastructureStackProps
             {
-                // If you don't specify 'env', this stack will be environment-agnostic.
-                // Account/Region-dependent features and context lookups will not work,
-                // but a single synthesized template can be deployed anywhere.
                 DomainName = name,
                 Env = new Amazon.CDK.Environment
                 {

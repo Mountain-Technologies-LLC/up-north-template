@@ -8,7 +8,6 @@ namespace Infrastructure.Constructs
     {
         public string Name;
         public string DomainName;
-        //public Distribution distribution;
     }
 
     public class BucketConstruct : Construct
@@ -26,7 +25,6 @@ namespace Infrastructure.Constructs
                 new BucketProps
                 {
                     BucketName = bucketName,
-                    //overriden below //BlockPublicAccess = BlockPublicAccess.BLOCK_ALL,
                     RemovalPolicy = RemovalPolicy.DESTROY,
                     AutoDeleteObjects = true,
 
@@ -37,8 +35,8 @@ namespace Infrastructure.Constructs
                     WebsiteIndexDocument = "index.html",
                 });
 
-            new CfnOutput(this, "BucketName", new CfnOutputProps { Value = Bucket.BucketName });
-            new CfnOutput(this, "Url", new CfnOutputProps { Value = Bucket.BucketWebsiteUrl });
+            _ = new CfnOutput(this, "BucketName", new CfnOutputProps { Value = Bucket.BucketName });
+            _ = new CfnOutput(this, "Url", new CfnOutputProps { Value = Bucket.BucketWebsiteUrl });
         }
     }
 }
